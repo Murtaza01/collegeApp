@@ -13,11 +13,11 @@ export default function AuthPage() {
 
     if (enteredEmail === "hello") {
       dispatch(authActions.authorizeUser());
-      navigate("stagepick");
+      navigate("/stagepick");
     } else if (enteredEmail === "admin") {
-      navigate("stages");
+      navigate("/");
       dispatch(authActions.authorizeAdmin());
-      dispatch(authActions.stage("stages"));
+      // dispatch(authActions.stage("/"));
     }
   }
 

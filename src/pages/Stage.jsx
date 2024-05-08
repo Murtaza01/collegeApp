@@ -2,6 +2,7 @@ import React from "react";
 import { useDispatch } from "react-redux";
 import { useParams, useNavigate } from "react-router-dom";
 import { authActions } from "../store/auth";
+
 export default function StagePage() {
   const navigate = useNavigate();
   const param = useParams();
@@ -9,8 +10,8 @@ export default function StagePage() {
 
   function handleClick() {
     dispatch(authActions.unAuthorize());
-    dispatch(authActions.stage(""));
-    navigate("/");
+    // dispatch(authActions.stage(""));
+    navigate("/authorize");
   }
   return (
     <>

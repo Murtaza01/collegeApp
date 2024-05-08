@@ -5,7 +5,7 @@ const initialState = {
     user: false,
     admin: false,
   },
-  stage: "",
+  stage: null,
 };
 
 const authSlice = createSlice({
