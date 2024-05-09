@@ -1,20 +1,25 @@
 import { useDispatch } from "react-redux";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { authActions } from "../store/auth";
+
+const stages = ["stage1", "stage2", "stage3", "stage4"];
 
 export default function StagePickPage() {
   const dispatch = useDispatch();
-  const navigate = useNavigate();
-  function handleClick() {
-    // dispatch(authActions.stage("/"));
-    navigate("/");
+  function handleClick(stage) {
+    dispatch(authActions.stage(`/${stage}`));
   }
   return (
     <ul>
-      <a onClick={handleClick}>Stage 1</a>
-      <Link>Stage 2</Link>
-      <Link>Stage 3</Link>
-      <Link>Stage 4</Link>
+      {stages.map((stage) => {
+        return (
+          <li key={stage}>
+            <Link to={`/${stage}`} onClick={() => handleClick(stage)}>
+              {stage}
+            </Link>
+          </li>
+        );
+      })}
     </ul>
   );
 }

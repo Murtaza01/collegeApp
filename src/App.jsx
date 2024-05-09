@@ -14,29 +14,27 @@ const router = createBrowserRouter([
     element: <Root />,
     loader: () => {
       const data = localStorage.getItem("persist:root");
-      // const stage = JSON.parse(JSON.parse(data).stage);
+      const stage = JSON.parse(JSON.parse(data).stage);
       const auth = JSON.parse(JSON.parse(data).isAuth);
       if (!auth.user && !auth.admin) {
         return redirect("/authorize");
+      } else if (stage) {
+        return redirect(stage);
       }
       return null;
     },
   },
-
+  {
+    path: ":stage",
+    element: <StagePage />,
+  },
   {
     path: "/authorize",
     element: <AuthPage />,
   },
   { path: "/stagepick", element: <StagePickPage /> },
-  // {
-  //   path: ":stage",
-  //   element: ,
-  // },
 ]);
 
 export default function App() {
-  const data = localStorage.getItem("persist:root");
-  const stage = JSON.parse(JSON.parse(data).stage);
-  console.log(stage);
   return <RouterProvider router={router} />;
 }

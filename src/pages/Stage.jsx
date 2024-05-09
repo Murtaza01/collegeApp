@@ -10,7 +10,7 @@ export default function StagePage() {
 
   function handleClick() {
     dispatch(authActions.unAuthorize());
-    // dispatch(authActions.stage(""));
+    dispatch(authActions.stage(null));
     navigate("/authorize");
   }
   return (

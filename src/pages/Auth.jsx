@@ -11,13 +11,15 @@ export default function AuthPage() {
   function handleFormSubmit(event) {
     event.preventDefault();
 
+    if (enteredEmail === "admin") {
+      navigate("/stages");
+      dispatch(authActions.authorizeAdmin());
+      dispatch(authActions.stage("/stages"));
+    }
+
     if (enteredEmail === "hello") {
       dispatch(authActions.authorizeUser());
       navigate("/stagepick");
-    } else if (enteredEmail === "admin") {
-      navigate("/");
-      dispatch(authActions.authorizeAdmin());
-      // dispatch(authActions.stage("/"));
     }
   }
 
