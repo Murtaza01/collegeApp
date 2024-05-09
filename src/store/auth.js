@@ -21,6 +21,7 @@ const authSlice = createSlice({
     unAuthorize(state) {
       state.isAuth.user = false;
       state.isAuth.admin = false;
+      state.stage = null;
     },
     stage(state, action) {
       state.stage = action.payload;
