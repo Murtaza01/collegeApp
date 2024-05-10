@@ -10,12 +10,12 @@ export default function Root() {
 
 export function redirectLoader() {
   const data = localStorage.getItem("persist:root");
-  const stage = JSON.parse(JSON.parse(data).stage);
+  const setStage = JSON.parse(JSON.parse(data).setStage);
   const auth = JSON.parse(JSON.parse(data).isAuth);
   if (!auth.user && !auth.admin) {
     return redirect("/authorize");
-  } else if (stage) {
-    return redirect(stage);
+  } else if (setStage) {
+    return redirect(setStage);
   }
   return null;
 }

@@ -5,7 +5,7 @@ const initialState = {
     user: false,
     admin: false,
   },
-  stage: null,
+  setStage: null,
 };
 
 const authSlice = createSlice({
@@ -21,10 +21,10 @@ const authSlice = createSlice({
     unAuthorize(state) {
       state.isAuth.user = false;
       state.isAuth.admin = false;
-      state.stage = null;
+      state.setStage = null;
     },
-    stage(state, action) {
-      state.stage = action.payload;
+    setStage(state, action) {
+      state.setStage = action.payload;
     },
   },
 });
