@@ -2,7 +2,7 @@ import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { authActions } from "../store/auth";
 
-const Stages = ["stage1", "stage2", "stage3", "stage4"];
+const Stages = ["First-Stage", "Second-Stage", "Third-Stage", "Fourth-Stage"];
 
 export default function StagePickPage() {
   const dispatch = useDispatch();
@@ -11,16 +11,23 @@ export default function StagePickPage() {
     dispatch(authActions.setStage(`/${stage}`));
   }
   return (
-    <ul>
-      {Stages.map((stage) => {
-        return (
-          <li key={stage}>
-            <Link to={`/${stage}`} onClick={() => handleClick(stage)}>
-              {stage}
-            </Link>
-          </li>
-        );
-      })}
-    </ul>
+    <section className="h-screen center flex-col gap-10">
+      <h1 className="text-2xl">Which Stage Are You?</h1>
+      <ul className="space-y-5">
+        {Stages.map((stage) => {
+          return (
+            <li key={stage} className="">
+              <Link
+                className="bg-black text-white block w-52 capitalize text-center py-3"
+                to={`/${stage}`}
+                onClick={() => handleClick(stage)}
+              >
+                {stage}
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+    </section>
   );
 }

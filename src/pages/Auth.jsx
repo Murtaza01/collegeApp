@@ -3,8 +3,8 @@ import { authActions } from "../store/auth";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { checkEmail } from "../util/checkEmail";
-// import { IoIosMail } from "react-icons/io";
-// import { FaRegArrowAltCircleRight } from "react-icons/fa";
+import { IoIosMail } from "react-icons/io";
+import { IoAlertCircleOutline } from "react-icons/io5";
 
 export default function AuthPage() {
   const [validEmail, setValidEmail] = useState(true);
@@ -21,7 +21,7 @@ export default function AuthPage() {
     if (emailValue === "admin") {
       dispatch(authActions.authorizeAdmin());
       dispatch(authActions.setStage("/stages"));
-      navigate("/stages");
+      navigate("/All-Stages");
     } else if (!correctEmail) {
       setValidEmail(false);
       setTimeout(() => {
@@ -38,29 +38,32 @@ export default function AuthPage() {
       <div className="w-full center mx-2">
         <form
           onSubmit={handleFormSubmit}
-          className="bg-gray-300 relative h-52 w-11/12 max-w-[400px] center flex-col   rounded-lg "
+          className="bg-gray-300 relative shadow-md h-52 w-11/12 max-w-[400px] center flex-col   rounded-lg "
         >
-          <div className="bg-white px-2 py-1 rounded-md w-11/12 max-w-80 center gap-1 ">
-            <span>{/* <IoIosMail /> */}X</span>
+          <div
+            className={`bg-white ${
+              !validEmail ? "border-[1px] border-red-400" : ""
+            }  px-2 py-1  rounded-md   w-11/12 max-w-80 center gap-1 `}
+          >
+            <span className="pr-1 border-r-[1px] border-black">
+              <IoIosMail className="text-xl" />
+            </span>
             <input
-              placeholder="Enter Your College Email"
+              placeholder="Enter Your Email"
               type="text"
               ref={email}
-              className=" outline-none bg-white w-full"
+              className=" outline-none bg-transparent w-full"
             />
-            <span className="bg-black rounded-sm center">
-              {/* <FaRegArrowAltCircleRight /> */}X
-            </span>
           </div>
-
-          <button className="bg-black mt-5 text-white w-36 py-1 rounded-md">
-            Submit
-          </button>
           {!validEmail && (
-            <p className="text-red-500 absolute bottom-3 left-[25%]">
+            <p className="text-red-500 mt-2  center gap-2 capitalize">
+              <IoAlertCircleOutline className="text-lg " />
               please enter a correct email
             </p>
           )}
+          <button className="bg-black mt-5 text-white w-36 py-1 rounded-md">
+            Submit
+          </button>
         </form>
       </div>
     </section>
