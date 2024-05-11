@@ -3,6 +3,7 @@ import { useParams, useNavigate, Outlet } from "react-router-dom";
 import { authActions } from "../store/auth";
 import { Link } from "react-router-dom";
 import { stages } from "../assets/data/stages";
+
 export default function StagePage() {
   const navigate = useNavigate();
   const param = useParams();

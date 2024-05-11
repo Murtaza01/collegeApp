@@ -4,6 +4,7 @@ import StagePickPage from "./pages/StagePick";
 import AuthPage from "./pages/Auth";
 import Root, { redirectLoader } from "./pages/Root";
 import BooksPage from "./pages/Books";
+import NavigationPage from "./pages/Navigation";
 
 const router = createBrowserRouter([
   {
@@ -15,6 +16,7 @@ const router = createBrowserRouter([
     path: ":stage",
     element: <StagePage />,
     children: [
+      { index: true, element: <NavigationPage /> },
       {
         path: "books",
         element: <BooksPage />,
