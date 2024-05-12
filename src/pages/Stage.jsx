@@ -1,8 +1,8 @@
 import { useDispatch } from "react-redux";
 import { useParams, useNavigate, Outlet } from "react-router-dom";
 import { authActions } from "../store/auth";
-import { Link } from "react-router-dom";
-import { stages } from "../assets/data/stages";
+import stages from "../assets/data/stages";
+import NavigationBar from "../components/NavigationBar";
 
 export default function StagePage() {
   const navigate = useNavigate();
@@ -21,8 +21,9 @@ export default function StagePage() {
   }
   return (
     <>
+      <NavigationBar />
       <h1>{param.stage}</h1>
-      <Link to="books">Books</Link>
+
       <button onClick={handleClick}>Get Back</button>
       <Outlet context={selectedStage} />
     </>

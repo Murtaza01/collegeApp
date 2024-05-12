@@ -20,7 +20,7 @@ export default function AuthPage() {
 
     if (emailValue === "admin") {
       dispatch(authActions.authorizeAdmin());
-      dispatch(authActions.setStage("/stages"));
+      dispatch(authActions.setStage("/All-Stages"));
       navigate("/All-Stages");
     } else if (!correctEmail) {
       setValidEmail(false);
