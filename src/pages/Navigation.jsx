@@ -6,13 +6,13 @@ export default function NavigationPage() {
     <>
       <div className="my-10 w-full px-2 center2 ">
         <menu className="grid grid-cols-2 gap-2">
-          {navCardData.map(({ title, route, image }) => {
+          {navCardData.map(({ title, route, icon }) => {
             return (
               <NavigationCard
                 key={title}
                 title={title}
                 route={route}
-                image={image}
+                icon={icon}
               />
             );
           })}

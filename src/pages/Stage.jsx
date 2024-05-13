@@ -1,7 +1,7 @@
 import { useDispatch } from "react-redux";
 import { useParams, useNavigate, Outlet } from "react-router-dom";
 import { authActions } from "../store/auth";
-import stages from "../assets/data/stages";
+import stagesData from "../assets/data/stages";
 import NavigationBar from "../components/NavigationBar";
 
 export default function StagePage() {
@@ -13,7 +13,7 @@ export default function StagePage() {
     dispatch(authActions.unAuthorize());
   };
 
-  const selectedStage = stages[`${param.stage}`];
+  const selectedStage = stagesData[`${param.stage}`];
 
   function handleClick() {
     dispatch(authActions.unAuthorize());

@@ -1,4 +1,4 @@
-const stages = {
+const stagesData = {
   ["First-Stage"]: 1,
   ["Second-Stage"]: 2,
   ["Third-Stage"]: 3,
@@ -6,4 +6,4 @@ const stages = {
   ["All-Stages"]: 5,
 };
 
-export default stages;
+export default stagesData;

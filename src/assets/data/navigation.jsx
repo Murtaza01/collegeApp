@@ -1,7 +1,8 @@
 import { FaHome } from "react-icons/fa";
 import { GiWhiteBook } from "react-icons/gi";
-import book from "../../assets/books.png";
-import book1 from "../../assets/books.png";
+import { GiBookPile } from "react-icons/gi";
+// import { GiExitDoor } from "react-icons/gi";
+import { BsBriefcaseFill } from "react-icons/bs";
 
 export const navBarData = [
   {
@@ -20,12 +21,35 @@ export const navBarData = [
 export const navCardData = [
   {
     title: "Books",
-    image: book,
+    icon: (
+      <svg width="1em" height="1em">
+        <linearGradient id="blue-gradient" x1="100%" y1="0" x2="0%" y2="100%">
+          <stop offset="30%" stopColor="#a17fe0" />
+          <stop offset="70%" stopColor="#5D26C1" />
+        </linearGradient>
+
+        <GiBookPile style={{ fill: "url(#blue-gradient)" }} />
+      </svg>
+    ),
+    route: "books",
+  },
+  {
+    title: "Case",
+    icon: (
+      <svg width="1em" height="1em">
+        <linearGradient id="red-gradient" x1="100%" y1="0%" x2="0%" y2="100%">
+          <stop offset="30%" stopColor="#C06C84" />
+          <stop offset="70%" stopColor="#355C7D" />
+        </linearGradient>
+
+        <BsBriefcaseFill style={{ fill: "url(#red-gradient)" }} />
+      </svg>
+    ),
     route: "books",
   },
   {
     title: "More Books",
-    image: book1,
+    icon: <GiBookPile className="text-violet-500" />,
     route: "books",
   },
 ];
