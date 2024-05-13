@@ -5,12 +5,14 @@ import { useNavigate } from "react-router-dom";
 import { checkEmail } from "../util/checkEmail";
 import { IoIosMail } from "react-icons/io";
 import { IoAlertCircleOutline } from "react-icons/io5";
-
+import { useTranslation } from "react-i18next";
 export default function AuthPage() {
   const [validEmail, setValidEmail] = useState(true);
   const email = useRef();
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const { t } = useTranslation();
 
   function handleFormSubmit(event) {
     event.preventDefault();
@@ -62,7 +64,7 @@ export default function AuthPage() {
             </p>
           )}
           <button className="bg-black mt-5 text-white w-36 py-1 rounded-md">
-            Submit
+            {t("greeting")}
           </button>
         </form>
       </div>

@@ -8,3 +8,6 @@
 //     authStorage: data.isAuth,
 //   };
 // }
+
+// currentLang === "en" ? "n1" : "n2"
+// const currentLang = localStorage.getItem("i18nextLng");

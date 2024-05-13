@@ -9,7 +9,10 @@ export default i18n
   .use(initReactI18next)
   .init({
     debug: true,
+    // lng: "ar",
     fallbackLang: "en",
+    // ns: ["n2", "n1"],
+    // defaultNS: "n2",
     resources: {
       en: {
         translation: english,
