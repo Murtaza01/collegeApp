@@ -24,7 +24,7 @@ export default function NavigationCard({ title, route, icon, isExit, isLang }) {
         className="w-40 center flex-col  bg-gray-50 shadow-md h-28 rounded-md"
       >
         <span className="text-[65px]">{icon}</span>
-        <span className="">{t(`${title}`)}</span>
+        <span className=" capitalize">{t(`${title}`)}</span>
       </Link>
     </li>
   );

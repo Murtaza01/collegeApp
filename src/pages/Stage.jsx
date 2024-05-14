@@ -1,11 +1,10 @@
 import { useDispatch } from "react-redux";
-import { useParams, useNavigate, Outlet } from "react-router-dom";
+import { useParams, Outlet } from "react-router-dom";
 import { authActions } from "../store/auth";
 import stagesData from "../assets/data/stages";
 import NavigationBar from "../components/NavigationBar";
 
 export default function StagePage() {
-  const navigate = useNavigate();
   const param = useParams();
   const dispatch = useDispatch();
 
@@ -17,9 +16,11 @@ export default function StagePage() {
 
   return (
     <>
-      <NavigationBar />
-      {/* <h1>{param.stage}</h1> */}
-      <Outlet context={selectedStage} />
+      <main className="h-screen ">
+        <NavigationBar />
+        {/* <h1>{param.stage}</h1> */}
+        <Outlet context={selectedStage} />
+      </main>
     </>
   );
 }

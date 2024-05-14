@@ -1,6 +1,5 @@
 import { FaHome } from "react-icons/fa";
 import { GiWhiteBook } from "react-icons/gi";
-import { GiBookPile } from "react-icons/gi";
 import { GiExitDoor } from "react-icons/gi";
 import { BsBriefcaseFill } from "react-icons/bs";
 import { FaLanguage } from "react-icons/fa6";
@@ -22,7 +21,7 @@ export const navBarData = [
 export const navCardData = [
   {
     title: "Books",
-    icon: <GiBookPile className="text-violet-500" />,
+    icon: <GiWhiteBook className="text-blue-500" />,
     route: "books",
   },
   {
@@ -31,8 +30,9 @@ export const navCardData = [
     route: "books",
   },
   {
-    title: "Language",
+    title: "language",
     icon: <FaLanguage className="text-green-500" />,
+    route: "",
     isLang: true,
   },
   {

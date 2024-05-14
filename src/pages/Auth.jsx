@@ -6,6 +6,7 @@ import { checkEmail } from "../util/checkEmail";
 import { IoIosMail } from "react-icons/io";
 import { IoAlertCircleOutline } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
+
 export default function AuthPage() {
   const [validEmail, setValidEmail] = useState(true);
   const email = useRef();
@@ -13,7 +14,7 @@ export default function AuthPage() {
   const navigate = useNavigate();
 
   const { t } = useTranslation();
-
+  const currentLang = localStorage.getItem("i18nextLng");
   function handleFormSubmit(event) {
     event.preventDefault();
 
@@ -36,15 +37,15 @@ export default function AuthPage() {
   }
 
   return (
-    <section className="center h-screen ">
+    <section className="center h-screen bg-gradient-to-tl from-[#8e9eab] to-[#eef2f3]">
       <div className="w-full center mx-2">
         <form
           onSubmit={handleFormSubmit}
-          className="bg-gray-300 relative shadow-md h-52 w-11/12 max-w-[400px] center flex-col   rounded-lg "
+          className="bg-gray-50 relative shadow-lg h-52 w-11/12 max-w-[400px] center flex-col   rounded-lg "
         >
           <div
-            className={`bg-white ${
-              !validEmail ? "border-[1px] border-red-400" : ""
+            className={`bg-gray-200 ${
+              !validEmail ? "border-[1px] border-rose-500" : ""
             }  px-2 py-1  rounded-md   w-11/12 max-w-80 center gap-1 `}
           >
             <span className="pr-1 border-r-[1px] border-black">
@@ -58,13 +59,17 @@ export default function AuthPage() {
             />
           </div>
           {!validEmail && (
-            <p className="text-red-500 mt-2  center gap-2 capitalize">
+            <p
+              className={`text-rose-500 mt-2 center ${
+                currentLang === "ar" ? "flex-row-reverse" : ""
+              } gap-1 capitalize`}
+            >
               <IoAlertCircleOutline className="text-lg " />
-              please enter a correct email
+              {t("errorMessage")}
             </p>
           )}
-          <button className="bg-black mt-5 text-white w-36 py-1 rounded-md">
-            {t("greeting")}
+          <button className="bg-stone-800 mt-8 capitalize text-white w-36 py-1 rounded-md">
+            {t("submit")}
           </button>
         </form>
       </div>

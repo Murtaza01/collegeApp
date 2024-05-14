@@ -4,7 +4,7 @@ import { navBarData } from "../assets/data/navigation";
 
 export default function NavigationBar() {
   return (
-    <header className="h-14 bg-neutral-900 rounded-md py-3 w-full  mx-auto">
+    <header className="h-14 bg-stone-800 py-3 w-full  mx-auto">
       <nav className=" ">
         <ul className="flex justify-evenly ">
           {navBarData.map(({ route, icon, id, isEnd }) => {
@@ -14,7 +14,7 @@ export default function NavigationBar() {
                   to={route}
                   end={isEnd ?? false}
                   className={({ isActive }) =>
-                    isActive ? " text-amber-500" : ""
+                    isActive ? " text-amber-400" : ""
                   }
                 >
                   {icon}

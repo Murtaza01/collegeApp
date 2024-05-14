@@ -1,3 +1,6 @@
 {
-  "greeting": "مرحبا"
+  "greeting": "مرحبا",
+  "language": "تغيير اللغة",
+  "submit": "الدخول",
+  "errorMessage": "من فضلك ادخل ايميل صحيح"
 }

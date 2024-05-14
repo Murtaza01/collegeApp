@@ -1,3 +1,6 @@
 {
-  "greeting": "hello"
+  "greeting": "hello",
+  "language": "change language",
+  "submit": "submit",
+  "errorMessage": "Please Enter A Correct Email"
 }
