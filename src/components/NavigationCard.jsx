@@ -1,15 +1,30 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { useDispatch } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { authActions } from "../store/auth";
+import useLang from "../Hooks/useLang";
+import { useTranslation } from "react-i18next";
 
-export default function NavigationCard({ title, route, icon }) {
+export default function NavigationCard({ title, route, icon, isExit, isLang }) {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const changeLang = useLang();
+  const { t } = useTranslation();
+  function handleExit() {
+    dispatch(authActions.unAuthorize());
+    navigate("/authorize");
+  }
+  async function handleLang() {
+    await changeLang();
+  }
   return (
-    <li className=" ">
+    <li className="" onClick={(isExit && handleExit) || (isLang && handleLang)}>
       <Link
         to={route}
         className="w-40 center flex-col  bg-gray-50 shadow-md h-28 rounded-md"
       >
-        <span className="text-[70px] text-gray-700 ">{icon}</span>
-        <span className="">{title}</span>
+        <span className="text-[65px]">{icon}</span>
+        <span className="">{t(`${title}`)}</span>
       </Link>
     </li>
   );

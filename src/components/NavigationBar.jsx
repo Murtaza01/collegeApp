@@ -4,17 +4,17 @@ import { navBarData } from "../assets/data/navigation";
 
 export default function NavigationBar() {
   return (
-    <header className="h-14 bg-gray-300 rounded-md py-3 w-full  mx-auto">
+    <header className="h-14 bg-neutral-900 rounded-md py-3 w-full  mx-auto">
       <nav className=" ">
         <ul className="flex justify-evenly ">
           {navBarData.map(({ route, icon, id, isEnd }) => {
             return (
-              <li className="text-3xl" key={id}>
+              <li className="text-3xl text-white " key={id}>
                 <NavLink
                   to={route}
                   end={isEnd ?? false}
                   className={({ isActive }) =>
-                    isActive ? "text-yellow-200" : ""
+                    isActive ? " text-amber-500" : ""
                   }
                 >
                   {icon}

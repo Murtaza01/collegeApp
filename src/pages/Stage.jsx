@@ -15,16 +15,10 @@ export default function StagePage() {
 
   const selectedStage = stagesData[`${param.stage}`];
 
-  function handleClick() {
-    dispatch(authActions.unAuthorize());
-    navigate("/authorize");
-  }
   return (
     <>
       <NavigationBar />
-      <h1>{param.stage}</h1>
-
-      <button onClick={handleClick}>Get Back</button>
+      {/* <h1>{param.stage}</h1> */}
       <Outlet context={selectedStage} />
     </>
   );
