@@ -3,7 +3,13 @@ import { navCardData } from "../assets/data/navigation";
 export default function NavigationPage() {
   return (
     <>
-      <div className="my-10 w-full px-2 center2 ">
+      <figure className="h-64 collegeImage ">
+        <div className="center2 h-full text-2xl font-semibold">
+          <h1>Welcome</h1>
+        </div>
+      </figure>
+
+      <div className="py-10 w-full px-2 center2 ">
         <menu className="grid grid-cols-2 gap-2">
           {navCardData.map(({ title, route, icon, isExit, isLang }) => {
             return (

@@ -1,6 +1,9 @@
 {
-  "greeting": "hello",
   "language": "change language",
-  "submit": "submit",
-  "errorMessage": "Please Enter A Correct Email"
+  "submit": "log in",
+  "errorMessage": "Please Enter A Correct Email",
+  "about us": "about us",
+  "log out": "log out",
+  "books": "books",
+  "faq": "common questions"
 }

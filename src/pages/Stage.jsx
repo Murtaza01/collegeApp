@@ -16,7 +16,7 @@ export default function StagePage() {
 
   return (
     <>
-      <main className="h-screen ">
+      <main className="min-h-screen  bg-gray-100">
         <NavigationBar />
         {/* <h1>{param.stage}</h1> */}
         <Outlet context={selectedStage} />

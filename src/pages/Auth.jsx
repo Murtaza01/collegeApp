@@ -35,13 +35,12 @@ export default function AuthPage() {
       navigate("/stagepick");
     }
   }
-
   return (
-    <section className="center h-screen bg-gradient-to-tl from-[#8e9eab] to-[#eef2f3]">
+    <section className="center  h-screen  bg-gray-100 ">
       <div className="w-full center mx-2">
         <form
           onSubmit={handleFormSubmit}
-          className="bg-gray-50 relative shadow-lg h-52 w-11/12 max-w-[400px] center flex-col   rounded-lg "
+          className="bg-white relative shadow-lg h-52 w-11/12 max-w-[400px] center flex-col   rounded-lg "
         >
           <div
             className={`bg-gray-200 ${
