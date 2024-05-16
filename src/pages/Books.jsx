@@ -1,16 +1,13 @@
 import { useOutletContext } from "react-router-dom";
+import ImageSection from "../components/ImageSection";
+import image from "../assets/images/2.jpg";
 
 export default function BooksPage() {
   const context = useOutletContext();
   const { books } = context;
-
   return (
     <>
-      <figure className=" h-80 collegeImage ">
-        <div className="center2 text-white h-full text-2xl font-semibold">
-          <h1>All The Books you need</h1>
-        </div>
-      </figure>
+      <ImageSection img={image} heading="All the books you need" />
       <section className="grid grid-cols-2  gap-y-10 py-10 place-items-center">
         {books &&
           books.map(({ image, link, title }, index) => {
@@ -18,7 +15,7 @@ export default function BooksPage() {
               <figure
                 key={title}
                 className={`w-42 ${
-                  index === books.length - 1 ? "bg-red-300 col-span-2" : ""
+                  index === books.length - 1 ? "col-span-2" : ""
                 }`}
               >
                 <a href={link}>

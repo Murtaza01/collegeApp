@@ -12,18 +12,9 @@
     display: grid;
     place-items: center;
   }
-  .collegeImage {
-    position: relative;
-    isolation: isolate;
-    background: url("./assets/images/college.jpg") no-repeat center;
-    background-size: cover;
-  }
-  .collegeImage::after {
-    content: "";
-    position: absolute;
-    background-color: #5b5b5b;
-    opacity: 0.2;
-    inset: 0;
-    z-index: -1;
+  .center3 {
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
   }
 }
