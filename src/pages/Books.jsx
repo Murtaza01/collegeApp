@@ -22,7 +22,7 @@ export default function BooksPage() {
                   <img
                     src={image}
                     alt=""
-                    className="w-40 h-52  object-fill rounded-sm shadow-lg shadow-neutral-700"
+                    className="w-40 h-52  object-fill rounded-sm shadow-md shadow-neutral-700"
                   />
                 </a>
               </figure>
