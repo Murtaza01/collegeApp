@@ -1,5 +1,7 @@
+import firstStage from "./firstStage";
+
 const stagesData = {
-  ["First-Stage"]: 1,
+  ["First-Stage"]: firstStage,
   ["Second-Stage"]: 2,
   ["Third-Stage"]: 3,
   ["Fourth-Stage"]: 4,

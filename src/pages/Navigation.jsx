@@ -3,8 +3,8 @@ import { navCardData } from "../assets/data/navigation";
 export default function NavigationPage() {
   return (
     <>
-      <figure className="h-64 collegeImage ">
-        <div className="center2 h-full text-2xl font-semibold">
+      <figure className=" h-80 collegeImage ">
+        <div className="center2 text-white h-full text-2xl font-semibold">
           <h1>Welcome</h1>
         </div>
       </figure>

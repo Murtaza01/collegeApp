@@ -15,13 +15,13 @@
   .collegeImage {
     position: relative;
     isolation: isolate;
-    background: url("./assets/college.jpg") no-repeat center;
+    background: url("./assets/images/college.jpg") no-repeat center;
     background-size: cover;
   }
   .collegeImage::after {
     content: "";
     position: absolute;
-    background-color: #fff;
+    background-color: #5b5b5b;
     opacity: 0.2;
     inset: 0;
     z-index: -1;
