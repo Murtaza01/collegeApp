@@ -7,12 +7,14 @@ import BooksPage from "./pages/Books";
 import NavigationPage from "./pages/Navigation";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
+import Error from "./pages/Error";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-    loader: () => redirectLoader(),
+    loader: redirectLoader,
+    errorElement: <Error />,
   },
   {
     path: ":stage",
@@ -36,9 +38,10 @@ const router = createBrowserRouter([
 export default function App() {
   const { i18n } = useTranslation();
   useEffect(() => {
-    async () => {
+    async function changeLan() {
       await i18n.changeLanguage("ar");
-    };
+    }
+    changeLan();
   }, []);
   return <RouterProvider router={router} />;
 }
