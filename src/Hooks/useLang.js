@@ -6,8 +6,10 @@ export default function useLang() {
   async function changeLang() {
     if (currentLang === "ar") {
       await i18n.changeLanguage("en");
+      // document.body.dir = "ltr";
     } else {
       await i18n.changeLanguage("ar");
+      // document.body.dir = "rtl";
     }
   }
   return changeLang;

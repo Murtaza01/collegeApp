@@ -3,11 +3,12 @@ import StagePage from "./pages/Stage";
 import StagePickPage from "./pages/StagePick";
 import AuthPage from "./pages/Auth";
 import Root, { redirectLoader } from "./pages/Root";
-import BooksPage from "./pages/Books";
+import React, { Suspense } from "react";
 import NavigationPage from "./pages/Navigation";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import Error from "./pages/Error";
+const BooksPage = React.lazy(() => import("./pages/Books"));
 
 const router = createBrowserRouter([
   {
@@ -24,7 +25,11 @@ const router = createBrowserRouter([
       { index: true, element: <NavigationPage /> },
       {
         path: "books",
-        element: <BooksPage />,
+        element: (
+          <Suspense fallback={<p>loading ...</p>}>
+            <BooksPage />
+          </Suspense>
+        ),
       },
     ],
   },
@@ -38,10 +43,12 @@ const router = createBrowserRouter([
 export default function App() {
   const { i18n } = useTranslation();
   useEffect(() => {
-    async function changeLan() {
+    async function initialLanguage() {
       await i18n.changeLanguage("ar");
+      // document.body.dir = "rtl";
     }
-    changeLan();
+    initialLanguage();
   }, []);
+
   return <RouterProvider router={router} />;
 }
