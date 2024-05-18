@@ -5,6 +5,7 @@ import image from "../assets/images/2.jpg";
 export default function BooksPage() {
   const context = useOutletContext();
   const { books } = context;
+
   return (
     <>
       <ImageSection img={image} heading="All the books you need" />

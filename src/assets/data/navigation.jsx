@@ -29,7 +29,7 @@ export const navCardData = [
   },
 
   {
-    title: "faq",
+    title: "info",
     icon: <FaQuestionCircle className="text-indigo-500" />,
     route: "questions",
   },

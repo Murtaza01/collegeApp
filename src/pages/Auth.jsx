@@ -6,7 +6,7 @@ import { checkEmail } from "../util/checkEmail";
 import { IoIosMail } from "react-icons/io";
 import { IoAlertCircleOutline } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
-
+import { currentLang } from "../util/getStorage";
 export default function AuthPage() {
   const [validEmail, setValidEmail] = useState(true);
   const email = useRef();
@@ -14,7 +14,6 @@ export default function AuthPage() {
   const navigate = useNavigate();
 
   const { t } = useTranslation();
-  const currentLang = localStorage.getItem("i18nextLng");
   function handleFormSubmit(event) {
     event.preventDefault();
 
@@ -31,12 +30,11 @@ export default function AuthPage() {
         setValidEmail(true);
       }, 5000);
     } else {
-      dispatch(authActions.authorizeUser());
       navigate("/stagepick");
     }
   }
   return (
-    <section className="center  h-screen  bg-gray-100 ">
+    <section dir="ltr" className="center  h-screen  bg-gray-100 ">
       <div className="w-full center mx-2">
         <form
           onSubmit={handleFormSubmit}
@@ -47,11 +45,11 @@ export default function AuthPage() {
               !validEmail ? "border-[1px] border-rose-500" : ""
             }  px-2 py-1  rounded-md   w-11/12 max-w-80 center gap-1 `}
           >
-            <span className="pr-1 border-r-[1px] border-black">
+            <span className="border-r-[1px] pr-1 border-black">
               <IoIosMail className="text-xl" />
             </span>
             <input
-              placeholder="Enter Your Email"
+              placeholder="Enter your Email"
               type="text"
               ref={email}
               className=" outline-none bg-transparent w-full"
@@ -67,7 +65,7 @@ export default function AuthPage() {
               {t("errorMessage")}
             </p>
           )}
-          <button className="bg-stone-800 mt-8 capitalize text-white w-36 py-1 rounded-md">
+          <button className="bg-accent mt-8 capitalize text-neutral-900 w-36 py-1 rounded-md">
             {t("submit")}
           </button>
         </form>

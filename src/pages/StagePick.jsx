@@ -9,16 +9,17 @@ export default function StagePickPage() {
 
   function handleClick(stage) {
     dispatch(authActions.setStage(`/${stage}`));
+    dispatch(authActions.authorizeUser());
   }
   return (
-    <section className="h-screen center flex-col gap-10">
+    <section dir="ltr" className="h-screen center flex-col gap-10 ">
       <h1 className="text-2xl">Which Stage Are You?</h1>
       <ul className="space-y-5">
         {Stages.map((stage) => {
           return (
             <li key={stage} className="">
               <Link
-                className="bg-black text-white block w-52 capitalize text-center py-3"
+                className="bg-accent text-neutral-900 rounded-md block w-52 capitalize text-center py-3"
                 to={`/${stage}`}
                 onClick={() => handleClick(stage)}
               >

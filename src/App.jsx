@@ -45,7 +45,7 @@ export default function App() {
   useEffect(() => {
     async function initialLanguage() {
       await i18n.changeLanguage("ar");
-      // document.body.dir = "rtl";
+      document.body.dir = "rtl";
     }
     initialLanguage();
   }, []);
