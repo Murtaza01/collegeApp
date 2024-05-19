@@ -7,9 +7,12 @@ import { useTranslation } from "react-i18next";
 export default function NavigationPage() {
   const { t } = useTranslation();
   return (
-    <>
+    <main className="">
       <ImageSection img={image} heading={t("StageHeading")} />
-      <div className="py-10 w-full px-2 center2 ">
+      <h2 className="text-center mt-10 text-2xl text-neutral-900 capitalize">
+        {t("siteSections")}
+      </h2>
+      <div className="py-10 w-full px-2 center2  ">
         <menu className="grid grid-cols-2 gap-2">
           {navCardData.map(({ title, route, icon, isExit, isLang }) => {
             return (
@@ -25,6 +28,6 @@ export default function NavigationPage() {
           })}
         </menu>
       </div>
-    </>
+    </main>
   );
 }

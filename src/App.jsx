@@ -8,6 +8,7 @@ import NavigationPage from "./pages/Navigation";
 import { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import Error from "./pages/Error";
+import SubjectsPage from "./pages/Subjects";
 const BooksPage = React.lazy(() => import("./pages/Books"));
 
 const router = createBrowserRouter([
@@ -31,6 +32,7 @@ const router = createBrowserRouter([
           </Suspense>
         ),
       },
+      { path: "subjects", element: <SubjectsPage /> },
     ],
   },
   {

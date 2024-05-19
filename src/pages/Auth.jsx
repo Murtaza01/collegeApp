@@ -42,11 +42,11 @@ export default function AuthPage() {
         >
           <div
             className={`bg-gray-200 ${
-              !validEmail ? "border-[1px] border-rose-500" : ""
+              !validEmail ? "border-[1px] border-red-500" : ""
             }  px-2 py-1  rounded-md   w-11/12 max-w-80 center gap-1 `}
           >
             <span className="border-r-[1px] pr-1 border-black">
-              <IoIosMail className="text-xl" />
+              <IoIosMail className="text-xl " />
             </span>
             <input
               placeholder="Enter your Email"
@@ -57,7 +57,7 @@ export default function AuthPage() {
           </div>
           {!validEmail && (
             <p
-              className={`text-rose-500 mt-2 center ${
+              className={`text-red-500 mt-2 center ${
                 currentLang === "ar" ? "flex-row-reverse" : ""
               } gap-1 capitalize`}
             >
@@ -65,7 +65,7 @@ export default function AuthPage() {
               {t("errorMessage")}
             </p>
           )}
-          <button className="bg-accent mt-8 capitalize text-neutral-900 w-36 py-1 rounded-md">
+          <button className=" mt-8 capitalize shadow-neutral-500 w-36 py-1 btnStyle shadow-sm">
             {t("submit")}
           </button>
         </form>

@@ -4,6 +4,7 @@ import { GiExitDoor } from "react-icons/gi";
 import { FaLanguage } from "react-icons/fa6";
 import { FaQuestionCircle } from "react-icons/fa";
 import { BsInfoCircleFill } from "react-icons/bs";
+import { GiNotebook } from "react-icons/gi";
 
 // import { SiCoinmarketcap } from "react-icons/si"; // for signutrue
 
@@ -24,25 +25,30 @@ export const navBarData = [
 export const navCardData = [
   {
     title: "books",
-    icon: <GiWhiteBook className="text-blue-500" />,
+    icon: <GiWhiteBook className="text-indigo-500" />,
     route: "books",
+  },
+  {
+    title: "important stuff",
+    icon: <GiNotebook className="text-pink-500" />,
+    route: "subjects",
   },
 
   {
     title: "info",
-    icon: <FaQuestionCircle className="text-indigo-500" />,
+    icon: <FaQuestionCircle className="text-green-500" />,
     route: "questions",
   },
 
   {
     title: "language",
-    icon: <FaLanguage className="text-green-500" />,
+    icon: <FaLanguage className=" text-blue-500" />,
     route: "",
     isLang: true,
   },
   {
     title: "about us",
-    icon: <BsInfoCircleFill className=" text-yellow-500" />,
+    icon: <BsInfoCircleFill className=" text-cyan-500" />,
     route: "about",
   },
   {

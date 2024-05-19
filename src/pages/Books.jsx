@@ -1,10 +1,12 @@
 import { useOutletContext } from "react-router-dom";
 import ImageSection from "../components/ImageSection";
-import image from "../assets/images/2.jpg";
+import image from "../assets/images/library.jpg";
 
 export default function BooksPage() {
   const context = useOutletContext();
   const { books } = context;
+
+  const isEven = books.length % 2 !== 0;
 
   return (
     <>
@@ -16,7 +18,7 @@ export default function BooksPage() {
               <figure
                 key={title}
                 className={`w-42 ${
-                  index === books.length - 1 ? "col-span-2" : ""
+                  isEven && index === books.length - 1 ? "col-span-2" : ""
                 }`}
               >
                 <a href={link}>

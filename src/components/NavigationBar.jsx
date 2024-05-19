@@ -4,7 +4,7 @@ import { navBarData } from "../assets/data/navigation";
 
 export default function NavigationBar() {
   return (
-    <header className="h-16 bg-stone-800 py-4 w-full  mx-auto">
+    <header className="fixed top-0 left-0 z-20 h-16 bg-neutral-900 py-4 w-full  ">
       <nav className=" ">
         <ul className="flex justify-evenly ">
           {navBarData.map(({ route, icon, id, isEnd }) => {
