@@ -1,21 +1,16 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import img from "../assets/images/college.jpg";
+import { useOutletContext } from "react-router-dom";
+import SubjectCard from "../components/SubjectCard";
+
 export default function SubjectsPage() {
+  const { books } = useOutletContext();
+
   return (
-    <main className="pt-20 px-5 h-screen bgPattren ">
-      <Link className="relative block active:scale-95 max-w-[30rem] mx-auto ">
-        <figure className="isolate rounded-md bg-slate-400">
-          <img
-            src={img}
-            alt=""
-            className="mix-blend-multiply  w-full  max-h-16  object-cover "
-          />
-        </figure>
-        <span className="absolute center3 w-10/12 text-white  text-xl  capitalize">
-          <h1>ملخصات الادب</h1>
-        </span>
-      </Link>
+    <main className="mt-16 h-screen  bgPattren bg-gray-50 ">
+      <div className="grid gap-5 py-10 pr-4 pl-10">
+        {books.map(({ color, title, image }) => (
+          <SubjectCard color={color} key={title} img={image} />
+        ))}
+      </div>
     </main>
   );
 }

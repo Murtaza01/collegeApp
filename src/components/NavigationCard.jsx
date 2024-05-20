@@ -17,7 +17,10 @@ export default function NavigationCard({ title, route, icon, isExit, isLang }) {
     await changeLang();
   }
   return (
-    <li className="" onClick={(isExit && handleExit) || (isLang && handleLang)}>
+    <li
+      className="clickEffect"
+      onClick={(isExit && handleExit) || (isLang && handleLang)}
+    >
       <Link
         to={route}
         className="w-40 center flex-col   bg-white shadow-md h-28 rounded-md"

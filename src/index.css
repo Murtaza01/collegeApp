@@ -21,8 +21,9 @@ w-0
     left: 50%;
     translate: -50% -50%;
   }
-  .btnStyle {
-    @apply bg-accent text-neutral-900 rounded-md active:scale-95 duration-300;
+
+  .clickEffect {
+    @apply active:scale-90 duration-200 active:translate-y-1;
   }
   .bgPattren {
     background-image: url("./assets/images/cubes.png");

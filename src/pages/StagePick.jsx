@@ -19,7 +19,7 @@ export default function StagePickPage() {
           return (
             <li key={stage} className="">
               <Link
-                className=" btnStyle shadow-md shadow-neutral-400 block w-52 capitalize text-center py-3 "
+                className="clickEffect bg-accent text-neutral-900 shadow-md shadow-neutral-400 block w-52 capitalize rounded-sm text-center py-3 "
                 to={`/${stage}`}
                 onClick={() => handleClick(stage)}
               >

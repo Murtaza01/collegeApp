@@ -65,7 +65,7 @@ export default function AuthPage() {
               {t("errorMessage")}
             </p>
           )}
-          <button className=" mt-8 capitalize shadow-neutral-500 w-36 py-1 btnStyle shadow-sm">
+          <button className="clickEffect mt-8 rounded-md capitalize text-neutral-800 bg-accent shadow-neutral-500 w-36 py-1 btnStyle shadow-sm">
             {t("submit")}
           </button>
         </form>

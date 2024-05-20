@@ -3,8 +3,7 @@ import ImageSection from "../components/ImageSection";
 import image from "../assets/images/library.jpg";
 
 export default function BooksPage() {
-  const context = useOutletContext();
-  const { books } = context;
+  const { books } = useOutletContext();
 
   const isEven = books.length % 2 !== 0;
 
