@@ -17,7 +17,7 @@ export default function RootPage() {
 
   return (
     <>
-      <main className="min-h-screen bg-gray-100">
+      <main className="min-h-screen  bg-gray-100">
         <NavigationBar />
         <ScrollToTop />
         <Outlet context={selectedStage} />

@@ -5,7 +5,7 @@ export default function SubjectPage() {
 
   return (
     <>
-      <h1 className="center2 h-screen">{param.subject}</h1>
+      <h1 className="center2 min-h-screen  ">{param.subject}</h1>
     </>
   );
 }

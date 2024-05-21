@@ -7,7 +7,7 @@ import { IoIosMail } from "react-icons/io";
 import { IoAlertCircleOutline } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
 
-let firstRun = false;
+let firstRun = true;
 
 export default function AuthPage() {
   const [validEmail, setValidEmail] = useState(true);
@@ -18,15 +18,14 @@ export default function AuthPage() {
   const { t, i18n } = useTranslation();
   const currentLang = i18n.language;
   useEffect(() => {
-    if (!firstRun) {
+    if (firstRun) {
       async function defaultLang() {
         await i18n.changeLanguage("ar");
         document.body.dir = "rtl";
       }
       defaultLang();
     }
-
-    firstRun = true;
+    firstRun = false;
   }, []);
 
   function handleFormSubmit(event) {
@@ -37,8 +36,8 @@ export default function AuthPage() {
 
     if (emailValue === "admin") {
       dispatch(authActions.authorizeAdmin());
-      dispatch(authActions.setStage("/All-Stages"));
-      navigate("/All-Stages");
+      dispatch(authActions.setStage("/all-stages"));
+      navigate("/all-stages");
     } else if (!correctEmail) {
       setValidEmail(false);
       setTimeout(() => {

@@ -1,11 +1,14 @@
 import { useOutletContext } from "react-router-dom";
+import ImageSection from "../components/ImageSection";
 import SubjectCard from "../components/SubjectCard";
 import useLanguage from "../Hooks/useLanguage";
+import image from "../assets/images/2.jpg";
 export default function SubjectsPage() {
   const { books } = useOutletContext();
   const { isArabic } = useLanguage();
   return (
-    <main className="mt-16 h-screen bgPattren bg-gray-50 ">
+    <main className="bg-gray-50 min-h-screen bg-cubePattern">
+      <ImageSection img={image} heading="All the books you need" />
       <div
         className={`grid gap-5 py-10 ${isArabic ? "pl-4 pr-8" : "pr-4 pl-8"} `}
       >

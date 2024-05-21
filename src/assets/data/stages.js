@@ -10,11 +10,11 @@ import firstStage from "./firstStage";
 // const books = book1.concat(book2, book3, book4);
 
 const stagesData = {
-  ["First-Stage"]: firstStage,
-  ["Second-Stage"]: 2,
-  ["Third-Stage"]: 3,
-  ["Fourth-Stage"]: 4,
-  ["All-Stages"]: {
+  ["first-stage"]: firstStage,
+  ["second-stage"]: 2,
+  ["third-stage"]: 3,
+  ["fourth-stage"]: 4,
+  ["all-stages"]: {
     // books,
   },
 };

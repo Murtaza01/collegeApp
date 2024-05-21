@@ -1,12 +1,12 @@
-import pronunciation from "../images/better_english_pronunciation.jpg";
-import conversation from "../images/english_conversation.jpg";
-import englishGrammarInUse from "../images/english_grammar_in_use.jpg";
-import reading from "../images/select_reading.jpg";
-import computer_1 from "../images/computer_1.jpg";
-import computer_2 from "../images/computer_2.jpg";
-import totem1 from "../images/totem1.jpg";
-import spanish from "../images/spanish.jpg";
-import writing from "../images/writing_in_paragraphs.jpg";
+import pronunciation from "../images/books/stage1/better_english_pronunciation.jpg";
+import conversation from "../images/books/stage1/english_conversation.jpg";
+import englishGrammarInUse from "../images/books/stage1/english_grammar_in_use.jpg";
+import reading from "../images/books/stage1/select_reading.jpg";
+import computer_1 from "../images/books/stage1/computer_1.jpg";
+import computer_2 from "../images/books/stage1/computer_2.jpg";
+import totem1 from "../images/books/stage1/totem1.jpg";
+import spanish from "../images/books/stage1/spanish.jpg";
+import writing from "../images/books/stage1/writing_in_paragraphs.jpg";
 
 const firstStage = {
   books: [

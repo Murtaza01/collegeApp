@@ -40,7 +40,6 @@ const router = createBrowserRouter([
     ],
   },
 ]);
-
 export default function App() {
   useDir();
   return <RouterProvider router={router} />;

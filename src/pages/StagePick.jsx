@@ -1,11 +1,14 @@
 import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import { authActions } from "../store/auth";
-
-const Stages = ["First-Stage", "Second-Stage", "Third-Stage", "Fourth-Stage"];
+import stagesData from "../assets/data/stages";
+import { useTranslation } from "react-i18next";
 
 export default function StagePickPage() {
   const dispatch = useDispatch();
+  const { t } = useTranslation();
+  const stagesArray = Object.keys(stagesData);
+  const stages = stagesArray.slice(0, -1);
 
   function handleClick(stage) {
     dispatch(authActions.setStage(`/${stage}`));
@@ -13,9 +16,9 @@ export default function StagePickPage() {
   }
   return (
     <section dir="ltr" className="h-screen center flex-col gap-10 ">
-      <h1 className="text-2xl">Which Stage Are You?</h1>
+      <h1 className="text-2xl">{t("whichStage")}</h1>
       <ul className="space-y-5">
-        {Stages.map((stage) => {
+        {stages.map((stage) => {
           return (
             <li key={stage} className="">
               <Link
@@ -23,7 +26,7 @@ export default function StagePickPage() {
                 to={`/${stage}`}
                 onClick={() => handleClick(stage)}
               >
-                {stage}
+                {t(`${stage}`)}
               </Link>
             </li>
           );

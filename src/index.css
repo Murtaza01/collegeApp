@@ -25,7 +25,4 @@ w-0
   .clickEffect {
     @apply active:scale-90 duration-200 active:translate-y-1;
   }
-  .bgPattren {
-    background-image: url("./assets/images/cubes.png");
-  }
 }
