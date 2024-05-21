@@ -1,5 +1,5 @@
 import { redirect } from "react-router-dom";
-import { authStorage } from "../util/getStorage";
+import { authStorage } from "../util/helpers";
 
 export default function Root() {
   return;

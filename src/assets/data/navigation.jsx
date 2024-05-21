@@ -20,6 +20,11 @@ export const navBarData = [
     route: "books",
     icon: <GiWhiteBook />,
   },
+  {
+    id: 3,
+    route: "subjects",
+    icon: <GiNotebook />,
+  },
 ];
 
 export const navCardData = [

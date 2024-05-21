@@ -1,19 +1,34 @@
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { authActions } from "../store/auth";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import { checkEmail } from "../util/checkEmail";
+import { checkEmail } from "../util/helpers";
 import { IoIosMail } from "react-icons/io";
 import { IoAlertCircleOutline } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
-import { currentLang } from "../util/getStorage";
+
+let firstRun = false;
+
 export default function AuthPage() {
   const [validEmail, setValidEmail] = useState(true);
   const email = useRef();
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+  const currentLang = i18n.language;
+  useEffect(() => {
+    if (!firstRun) {
+      async function defaultLang() {
+        await i18n.changeLanguage("ar");
+        document.body.dir = "rtl";
+      }
+      defaultLang();
+    }
+
+    firstRun = true;
+  }, []);
+
   function handleFormSubmit(event) {
     event.preventDefault();
 

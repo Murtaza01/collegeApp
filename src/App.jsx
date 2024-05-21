@@ -5,8 +5,6 @@ import AuthPage from "./pages/Auth";
 import Root, { redirectLoader } from "./pages/Root";
 import React, { Suspense } from "react";
 import NavigationPage from "./pages/Navigation";
-import { useEffect } from "react";
-import { useTranslation } from "react-i18next";
 import Error from "./pages/Error";
 import SubjectsPage from "./pages/Subjects";
 const BooksPage = React.lazy(() => import("./pages/Books"));
@@ -43,14 +41,5 @@ const router = createBrowserRouter([
 ]);
 
 export default function App() {
-  const { i18n } = useTranslation();
-  useEffect(() => {
-    async function initialLanguage() {
-      await i18n.changeLanguage("ar");
-      document.body.dir = "rtl";
-    }
-    initialLanguage();
-  }, []);
-
   return <RouterProvider router={router} />;
 }
