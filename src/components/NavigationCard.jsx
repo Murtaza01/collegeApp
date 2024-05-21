@@ -1,25 +1,27 @@
 import { useDispatch } from "react-redux";
 import { Link, useNavigate } from "react-router-dom";
 import { authActions } from "../store/auth";
-import useLang from "../Hooks/useLang";
+import useLanguage from "../Hooks/useLanguage";
 import { useTranslation } from "react-i18next";
 
 export default function NavigationCard({ title, route, icon, isExit, isLang }) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const changeLang = useLang();
+  const { changeLang } = useLanguage();
   const { t } = useTranslation();
+
   function handleExit() {
     dispatch(authActions.unAuthorize());
     navigate("/authorize");
   }
-  async function handleLang() {
+
+  async function languageChangeHandler() {
     await changeLang();
   }
   return (
     <li
       className="clickEffect"
-      onClick={(isExit && handleExit) || (isLang && handleLang)}
+      onClick={(isExit && handleExit) || (isLang && languageChangeHandler)}
     >
       <Link
         to={route}

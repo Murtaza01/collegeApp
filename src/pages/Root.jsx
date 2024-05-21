@@ -1,26 +1,27 @@
-import { redirect } from "react-router-dom";
-import { authStorage } from "../util/helpers";
+import { useDispatch } from "react-redux";
+import { useParams, Outlet } from "react-router-dom";
+import { authActions } from "../store/auth";
+import stagesData from "../assets/data/stages";
+import NavigationBar from "../components/NavigationBar";
+import ScrollToTop from "../ScrollToTop";
 
-export default function Root() {
-  return;
-}
+export default function RootPage() {
+  const param = useParams();
+  const dispatch = useDispatch();
 
-export function redirectLoader() {
-  let auth = {
-    user: "",
-    admin: "",
+  window.onpopstate = () => {
+    dispatch(authActions.unAuthorize());
   };
-  let setStage;
 
-  if (authStorage) {
-    auth = JSON.parse(authStorage.isAuth);
-    setStage = JSON.parse(authStorage.setStage);
-  }
+  const selectedStage = stagesData[`${param.stage}`];
 
-  if (!auth.user && !auth.admin) {
-    return redirect("/authorize");
-  } else if (setStage) {
-    return redirect(setStage);
-  }
-  return null;
+  return (
+    <>
+      <main className="min-h-screen bg-gray-100">
+        <NavigationBar />
+        <ScrollToTop />
+        <Outlet context={selectedStage} />
+      </main>
+    </>
+  );
 }

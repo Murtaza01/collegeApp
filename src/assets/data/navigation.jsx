@@ -4,7 +4,11 @@ import { GiExitDoor } from "react-icons/gi";
 import { FaLanguage } from "react-icons/fa6";
 import { FaQuestionCircle } from "react-icons/fa";
 import { BsInfoCircleFill } from "react-icons/bs";
-import { GiNotebook } from "react-icons/gi";
+import { GiBookCover } from "react-icons/gi";
+
+// import { GiNotebook } from "react-icons/gi";
+// import { VscBook } from "react-icons/vsc";
+// import { GiOpenBook } from "react-icons/gi";
 
 // import { SiCoinmarketcap } from "react-icons/si"; // for signutrue
 
@@ -23,7 +27,7 @@ export const navBarData = [
   {
     id: 3,
     route: "subjects",
-    icon: <GiNotebook />,
+    icon: <GiBookCover />,
   },
 ];
 
@@ -35,7 +39,7 @@ export const navCardData = [
   },
   {
     title: "important stuff",
-    icon: <GiNotebook className="text-pink-500" />,
+    icon: <GiBookCover className="text-orange-500" />,
     route: "subjects",
   },
 
