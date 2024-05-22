@@ -11,6 +11,9 @@ export default {
       colors: {
         accent: "#4ADE80",
       },
+      boxShadow: {
+        inset: "inset 0 -0.4em 0 0 #2563eb",
+      },
     },
   },
   plugins: [],

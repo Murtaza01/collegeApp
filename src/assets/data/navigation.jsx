@@ -34,24 +34,24 @@ export const navBarData = [
 export const navCardData = [
   {
     title: "books",
-    icon: <GiWhiteBook className="text-indigo-500" />,
+    icon: <GiWhiteBook className="text-purple-500" />,
     route: "books",
   },
   {
-    title: "important stuff",
+    title: "subjectsGuide",
     icon: <GiBookCover className="text-orange-500" />,
     route: "subjects",
   },
 
   {
     title: "info",
-    icon: <FaQuestionCircle className="text-green-500" />,
-    route: "questions",
+    icon: <FaQuestionCircle className="text-blue-500" />,
+    route: "instructions",
   },
 
   {
     title: "language",
-    icon: <FaLanguage className=" text-blue-500" />,
+    icon: <FaLanguage className=" text-green-500" />,
     route: "",
     isLang: true,
   },

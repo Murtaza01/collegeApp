@@ -4,13 +4,18 @@ import image from "../assets/images/library.jpg";
 
 export default function BooksPage() {
   const { books } = useOutletContext();
-
   const isEven = books.length % 2 !== 0;
 
   return (
     <>
-      <ImageSection img={image} heading="All the books you need" />
-      <section className="grid grid-cols-2  gap-y-10 py-10 place-items-center">
+      <ImageSection
+        img={image}
+        heading="booksHeading"
+        paragraph="booksDes"
+        style="text-center text-2xl capitalize"
+      />
+
+      <section className="grid  grid-cols-2  gap-y-10 py-10 place-items-center">
         {books &&
           books.map(({ image, link, title }, index) => {
             return (

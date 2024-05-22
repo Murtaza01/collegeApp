@@ -1,0 +1,26 @@
+{
+  "submit": "log in",
+  "errorMessage": "please enter a correct email",
+  "log out": "log out",
+  "first-stage": " first-stage",
+  "second-stage": " second-stage",
+  "third-stage": " third-stage",
+  "fourth-stage": " fourth-stage",
+  "whichStage": "which stage are you?",
+  "language": "change language",
+  "about us": "about us",
+  "books": "books",
+  "subjectsGuide": "subjects guide",
+  "info": "instructions",
+  "navHeading": "welcome, here you will find all the books and exam sheets and summaries related to your stage",
+  "siteSections": "sections of the site",
+  "booksHeading": {
+    "main": "all the books",
+    "almost": "well almost",
+    "quesMark": "?"
+  },
+  "booksDes": {
+    "des": "To download a book, simply click the book and pick any email",
+    "problem": "are you having a problem?"
+  }
+}

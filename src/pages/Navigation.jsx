@@ -8,7 +8,7 @@ export default function NavigationPage() {
   const { t } = useTranslation();
   return (
     <>
-      <ImageSection img={image} heading={t("StageHeading")} />
+      <ImageSection img={image} heading="navHeading" />
       <h2 className="text-center mt-10 text-2xl text-neutral-900 capitalize">
         {t("siteSections")}
       </h2>
