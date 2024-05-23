@@ -8,14 +8,9 @@ export default function BooksPage() {
 
   return (
     <>
-      <ImageSection
-        img={image}
-        heading="booksHeading"
-        paragraph="booksDes"
-        style="text-center text-2xl capitalize"
-      />
+      <ImageSection img={image} heading="booksHeading" paragraph="booksDes" />
 
-      <section className="grid  grid-cols-2  gap-y-10 py-10 place-items-center">
+      <section className="grid bg-geometryPattern  bg-gray-50 grid-cols-2  gap-y-10 py-10 place-items-center">
         {books &&
           books.map(({ image, link, title }, index) => {
             return (
@@ -29,8 +24,9 @@ export default function BooksPage() {
                   <img
                     src={image}
                     alt=""
-                    className="w-40 h-52  object-fill rounded-sm shadow-md shadow-neutral-700"
+                    className="w-36 h-44   object-fill rounded-md shadow-md shadow-neutral-800"
                   />
+                  {/* old size w-44 h-52*/}
                 </a>
               </figure>
             );

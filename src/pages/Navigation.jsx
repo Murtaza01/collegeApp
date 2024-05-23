@@ -3,13 +3,17 @@ import { navCardData } from "../assets/data/navigation";
 import ImageSection from "../components/ImageSection";
 import image from "../assets/images/college.jpg";
 import { useTranslation } from "react-i18next";
+import useLanguage from "../Hooks/useLanguage";
 
 export default function NavigationPage() {
   const { t } = useTranslation();
+  const { headFont } = useLanguage();
   return (
     <>
-      <ImageSection img={image} heading="navHeading" />
-      <h2 className="text-center mt-10 text-2xl text-neutral-900 capitalize">
+      <ImageSection img={image} heading="navHeading" paragraph="navDes" />
+      <h2
+        className={` ${headFont} text-center mt-10 text-xl text-neutral-800 capitalize`}
+      >
         {t("siteSections")}
       </h2>
       <div className="py-10 w-full px-2 center2  ">

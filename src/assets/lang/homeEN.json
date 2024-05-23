@@ -12,15 +12,24 @@
   "books": "books",
   "subjectsGuide": "subjects guide",
   "info": "instructions",
-  "navHeading": "welcome, here you will find all the books and exam sheets and summaries related to your stage",
-  "siteSections": "sections of the site",
+  "navHeading": "welcome",
+  "navDes": {
+    "des": "A website for English section students in college of arts Baghdad university",
+    "problem": ""
+  },
+  "siteSections": "website sections",
   "booksHeading": {
-    "main": "all the books",
+    "head": "all the books",
     "almost": "well almost",
     "quesMark": "?"
   },
   "booksDes": {
     "des": "To download a book, simply click the book and pick any email",
     "problem": "are you having a problem?"
+  },
+  "subjectsHeading": "subjects of your stage",
+  "subjectsDes": {
+    "des": "summaries, exam sheets and notes from former students",
+    "problem": ""
   }
 }

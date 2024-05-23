@@ -7,8 +7,12 @@ export default function SubjectsPage() {
   const { books } = useOutletContext();
   const { isArabic } = useLanguage();
   return (
-    <main className="bg-gray-50 min-h-screen bg-cubePattern">
-      <ImageSection img={image} heading="All the books you need" />
+    <main className="bg-white min-h-screen  bg-cubePattern">
+      <ImageSection
+        img={image}
+        heading="subjectsHeading"
+        paragraph="subjectsDes"
+      />
       <div
         className={`grid gap-5 py-10 ${isArabic ? "pl-4 pr-8" : "pr-4 pl-8"} `}
       >
@@ -18,7 +22,7 @@ export default function SubjectsPage() {
             key={title}
             title={title}
             img={image}
-            desc={subject.description}
+            desc={subject.subjectDes}
           />
         ))}
       </div>

@@ -7,7 +7,7 @@ import { useTranslation } from "react-i18next";
 export default function NavigationCard({ title, route, icon, isExit, isLang }) {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const { changeLang } = useLanguage();
+  const { changeLang, paraFont } = useLanguage();
   const { t } = useTranslation();
 
   function handleExit() {
@@ -28,7 +28,7 @@ export default function NavigationCard({ title, route, icon, isExit, isLang }) {
         className="w-40 center flex-col   bg-white shadow-md h-28 rounded-md"
       >
         <span className="text-[65px]">{icon}</span>
-        <span className=" capitalize">{t(`${title}`)}</span>
+        <span className={`capitalize ${paraFont} `}>{t(`${title}`)}</span>
       </Link>
     </li>
   );

@@ -4,6 +4,8 @@ export default function useLanguage() {
   const { i18n } = useTranslation();
   const currentLang = i18n.language;
   const isArabic = currentLang === "ar";
+  const headFont = isArabic ? "font-headingAr" : "font-headingEn";
+  const paraFont = isArabic ? "font-paragraphAr" : "font-paragraphAr";
 
   async function changeLang() {
     if (currentLang === "ar") {
@@ -15,5 +17,5 @@ export default function useLanguage() {
     }
   }
 
-  return { changeLang, isArabic };
+  return { changeLang, isArabic, headFont, paraFont };
 }
