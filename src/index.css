@@ -5,7 +5,7 @@
 
 @font-face {
   font-family: "Plein-Bold";
-  src: url("/public/fonts/Plein-Bold.woff") format("woff");
+  src: url("/fonts/Plein-Bold.woff") format("woff");
   font-weight: 700;
   font-display: swap;
   font-style: normal;
@@ -13,7 +13,7 @@
 
 @font-face {
   font-family: "BespokeSans-Regular";
-  src: url("../fonts/BespokeSans-Regular.woff") format("woff");
+  src: url("/fonts/BespokeSans-Regular.woff") format("woff");
   font-weight: 400;
   font-display: swap;
   font-style: normal;

@@ -14,12 +14,13 @@ export default {
         cubePattern: "url('/src/assets/images/patterns/cubes.png')",
         geometryPattern:
           "url('/src/assets/images/patterns/inspiration-geometry.png')",
+        // pageNotFound: "url('/404.svg')",
       },
       colors: {
         accent: "#4ADE80",
       },
       boxShadow: {
-        inset: "inset 0 -0.4em 0 -0.1em #2563eb",
+        inset: "inset 0 -0.5em 0 -0.1em #2563eb",
       },
     },
   },

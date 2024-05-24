@@ -2,6 +2,8 @@
   "submit": "log in",
   "errorMessage": "please enter a correct email",
   "log out": "log out",
+  "error": "It looks like there was a problem, please click the button below to fix it",
+  "clickHere": "click here",
   "first-stage": " first-stage",
   "second-stage": " second-stage",
   "third-stage": " third-stage",
@@ -27,7 +29,7 @@
     "des": "To download a book, simply click the book and pick any email",
     "problem": "are you having a problem?"
   },
-  "subjectsHeading": "subjects of your stage",
+  "subjectsHeading": "stage Subjects",
   "subjectsDes": {
     "des": "summaries, exam sheets and notes from former students",
     "problem": ""

@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link, useParams } from "react-router-dom";
-import useLanguage from "../Hooks/useLanguage";
+import useLanguage from "../hooks/useLanguage";
 export default function ImageSection({ img, paragraph, heading }) {
   const { t } = useTranslation();
   const { stage } = useParams();
@@ -26,13 +26,14 @@ export default function ImageSection({ img, paragraph, heading }) {
       </figure>
       <div className="absolute center3 w-11/12 ">
         <h1
-          className={`text-center text-2xl capitalize text-gray-200 ${headFont} `}
+          className={`text-center text-2xl capitalize text-gray-100 ${headFont} `}
         >
           {booksHeading ? booksHeading.head : t(heading)}{" "}
           {booksHeading && (
-            <Link to={`/${stage}/instructions`}>
+            <Link to={""}>
+              {/* `/${stage}/instructions` */}
               <sup className="lowercase">
-                <span className=" text-white shadow-inset">
+                <span className=" text-gray-300 shadow-inset text-base">
                   {booksHeading.almost}
                 </span>
                 <span className="text-gray-500">{booksHeading.quesMark}</span>
@@ -41,10 +42,12 @@ export default function ImageSection({ img, paragraph, heading }) {
           )}
         </h1>
         {paragraph && (
-          <p className={`text-center mt-2 ${paraFont} text-gray-300`}>
+          <p className={`text-center mt-2 ${paraFont} text-gray-200`}>
             {t(`${paragraph}.des`)}{" "}
             <Link>
-              <span className="shadow-inset ">{t(`${paragraph}.problem`)}</span>
+              <span className="shadow-inset  text-gray-300">
+                {t(`${paragraph}.problem`)}
+              </span>
             </Link>
           </p>
         )}

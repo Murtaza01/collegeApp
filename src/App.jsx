@@ -7,7 +7,7 @@ import NavigationPage from "./pages/Navigation";
 import Error from "./pages/Error";
 import SubjectsPage from "./pages/Subjects";
 import BooksPage from "./pages/Books";
-import useDir from "./Hooks/useDir";
+import useDir from "./hooks/useDir";
 import SubjectPage from "./pages/Subject";
 
 const router = createBrowserRouter([

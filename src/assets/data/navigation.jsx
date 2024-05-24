@@ -46,7 +46,7 @@ export const navCardData = [
   {
     title: "info",
     icon: <FaQuestionCircle className="text-blue-500" />,
-    route: "instructions",
+    route: "",
   },
 
   {
@@ -58,7 +58,7 @@ export const navCardData = [
   {
     title: "about us",
     icon: <BsInfoCircleFill className=" text-cyan-500" />,
-    route: "about",
+    route: "",
   },
   {
     title: "log out",

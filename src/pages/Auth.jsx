@@ -6,17 +6,16 @@ import { checkEmail } from "../util/helpers";
 import { IoIosMail } from "react-icons/io";
 import { IoAlertCircleOutline } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
+import useLanguage from "../hooks/useLanguage";
 
 let firstRun = true;
-
 export default function AuthPage() {
   const [validEmail, setValidEmail] = useState(true);
   const email = useRef();
   const dispatch = useDispatch();
   const navigate = useNavigate();
-
   const { t, i18n } = useTranslation();
-  const currentLang = i18n.language;
+  const { headFont } = useLanguage();
   useEffect(() => {
     if (firstRun) {
       async function defaultLang() {
@@ -70,16 +69,15 @@ export default function AuthPage() {
             />
           </div>
           {!validEmail && (
-            <p
-              className={`text-red-500 mt-2 center ${
-                currentLang === "ar" ? "flex-row-reverse" : ""
-              } gap-1 capitalize`}
-            >
+            <p className="text-red-500 mt-2 center  gap-1 capitalize">
               <IoAlertCircleOutline className="text-lg " />
               {t("errorMessage")}
             </p>
           )}
-          <button className="clickEffect mt-8 rounded-md capitalize text-neutral-800 bg-accent shadow-neutral-500 w-36 py-1 btnStyle shadow-sm">
+          <button
+            className={`clickEffect ${headFont} mt-8  rounded-md capitalize text-neutral-600
+           bg-accent shadow-neutral-500 px-5 py-1 shadow-sm`}
+          >
             {t("submit")}
           </button>
         </form>

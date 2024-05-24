@@ -1,9 +1,9 @@
 import NavigationCard from "../components/NavigationCard";
 import { navCardData } from "../assets/data/navigation";
 import ImageSection from "../components/ImageSection";
-import image from "../assets/images/college.jpg";
+import image from "../assets/images/englishSections.jpg";
 import { useTranslation } from "react-i18next";
-import useLanguage from "../Hooks/useLanguage";
+import useLanguage from "../hooks/useLanguage";
 
 export default function NavigationPage() {
   const { t } = useTranslation();

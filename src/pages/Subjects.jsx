@@ -1,8 +1,8 @@
 import { useOutletContext } from "react-router-dom";
 import ImageSection from "../components/ImageSection";
 import SubjectCard from "../components/SubjectCard";
-import useLanguage from "../Hooks/useLanguage";
-import image from "../assets/images/2.jpg";
+import useLanguage from "../hooks/useLanguage";
+import image from "../assets/images/college.jpg";
 export default function SubjectsPage() {
   const { books } = useOutletContext();
   const { isArabic } = useLanguage();
