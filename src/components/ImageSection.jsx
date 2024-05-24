@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link, useParams } from "react-router-dom";
-import useLanguage from "../hooks/useLanguage";
+import useLanguage from "../Hooks/useLanguage";
 export default function ImageSection({ img, paragraph, heading }) {
   const { t } = useTranslation();
   const { stage } = useParams();

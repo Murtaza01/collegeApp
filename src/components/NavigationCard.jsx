@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
-import useLanguage from "../hooks/useLanguage";
+import useLanguage from "../Hooks/useLanguage";
 import { useTranslation } from "react-i18next";
-import useExit from "../hooks/useExit";
+import useExit from "../Hooks/useExit";
 export default function NavigationCard({ title, route, icon, isExit, isLang }) {
   const { changeLang, paraFont } = useLanguage();
   const { t } = useTranslation();

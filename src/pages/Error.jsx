@@ -1,7 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { useRouteError } from "react-router-dom";
-import useExit from "../hooks/useExit";
-import useLanguage from "../hooks/useLanguage";
+import useExit from "../Hooks/useExit";
+import useLanguage from "../Hooks/useLanguage";
 import errorImg from "../assets/images/404.svg";
 export default function Error() {
   const error = useRouteError();

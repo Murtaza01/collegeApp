@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import useLanguage from "../hooks/useLanguage";
+import useLanguage from "../Hooks/useLanguage";
 export default function SubjectCard({ desc, img, color, title }) {
   const { t } = useTranslation();
   const { isArabic } = useLanguage();
