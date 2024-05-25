@@ -4,10 +4,10 @@ import StagePickPage from "./pages/StagePick";
 import AuthPage from "./pages/Auth";
 import RedirectPage, { redirectLoader } from "./pages/Redirect";
 import NavigationPage from "./pages/Navigation";
-import Error from "./pages/Error";
+import ErrorPage from "./pages/Error";
 import SubjectsPage from "./pages/Subjects";
 import BooksPage from "./pages/Books";
-import useDir from "./Hooks/useDir";
+import useDir from "./hooks/useDir";
 import SubjectPage from "./pages/Subject";
 
 const router = createBrowserRouter([
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
     path: "/",
     element: <RedirectPage />,
     loader: redirectLoader,
-    errorElement: <Error />,
+    errorElement: <ErrorPage />,
   },
   {
     path: "/authorize",

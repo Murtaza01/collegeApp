@@ -14,7 +14,7 @@ const firstStage = {
       title: "Better English Pronunciation",
       image: pronunciation,
       subject: {
-        color: "bg-gradient-to-r from-red-200  to-red-600",
+        color: "bg-gradient-to-r from-red-300  to-red-500",
         subjectDes: "pronunciation",
       },
       link: "https://drive.google.com/file/d/1jtTDd8YPyAKUAUEFfL6axjLRYhBaHpyf/view?usp=drive_link",
@@ -23,7 +23,7 @@ const firstStage = {
       title: "English Conversation",
       image: conversation,
       subject: {
-        color: "bg-gradient-to-r from-green-200 to-green-600",
+        color: "bg-gradient-to-r from-indigo-300 to-indigo-500",
         subjectDes: "conversation",
       },
       link: "https://drive.google.com/file/d/1gO1T1Fri9Ux8jKBP_s7g9_Sp129xJc56/view?usp=drive_link",
@@ -32,7 +32,7 @@ const firstStage = {
       title: "Select Readings",
       image: reading,
       subject: {
-        color: "bg-gradient-to-r from-cyan-200 to-cyan-600",
+        color: "bg-gradient-to-r from-sky-300 to-sky-500",
         subjectDes: "reading",
       },
       link: "https://drive.google.com/file/d/1mXyUb_UdXJ8s4WcOhMGM7zAdtGiidukh/view?usp=drive_link",
@@ -41,7 +41,7 @@ const firstStage = {
       title: "spanish",
       image: spanish,
       subject: {
-        color: "bg-gradient-to-r from-amber-200 to-amber-600",
+        color: "bg-gradient-to-r from-orange-300 to-orange-500",
         subjectDes: "spanish",
       },
       link: "https://drive.google.com/file/d/10A2GD_5EU-lKsTWm70QlSFs2EKU2oikn/view?usp=drive_link",
@@ -50,7 +50,7 @@ const firstStage = {
       title: "Totem 1",
       image: totem1,
       subject: {
-        color: "bg-gradient-to-r from-indigo-200 to-indigo-600",
+        color: "bg-gradient-to-r from-indigo-300 to-indigo-500",
         subjectDes: "french",
       },
       link: "https://drive.google.com/file/d/1w8hTUs3rr_OvopO5Tas94jDa-0BAqRGL/view?usp=drive_link",
@@ -60,7 +60,7 @@ const firstStage = {
       title: "English Grammar in use",
       image: englishGrammarInUse,
       subject: {
-        color: "bg-gradient-to-r from-blue-200 to-blue-600",
+        color: "bg-gradient-to-r from-blue-300 to-blue-500",
         subjectDes: "grammar",
       },
       link: "https://drive.google.com/file/d/1crUON5q9X4I-35jdUl341MSCFmlzUXJc/view?usp=drive_link",
@@ -69,7 +69,7 @@ const firstStage = {
       title: "Computer_1",
       image: computer_1,
       subject: {
-        color: "bg-gradient-to-r from-slate-200 to-slate-600",
+        color: "bg-gradient-to-r from-green-300 to-green-500",
         subjectDes: "computer1",
       },
       link: "https://drive.google.com/file/d/1vtrJBWoMA_Zpihb5QVHfQmHUtImagBDw/view?usp=drive_link",
@@ -78,7 +78,7 @@ const firstStage = {
       title: "Computer_2",
       image: computer_2,
       subject: {
-        color: "bg-gradient-to-r from-pink-200 to-pink-600",
+        color: "bg-gradient-to-r from-slate-300 to-slate-500",
         subjectDes: "computer2",
       },
       link: "https://drive.google.com/file/d/1niVzjRiUWaDO3wuGc9vkMePFdx6daD9b/view?usp=drive_link",
@@ -88,7 +88,7 @@ const firstStage = {
       title: "Writing in Paragraph",
       image: writing,
       subject: {
-        color: "bg-gradient-to-r from-purple-200 to-purple-600",
+        color: "bg-gradient-to-r from-blue-300 to-blue-500",
         subjectDes: "writing",
       },
       link: "https://drive.google.com/file/d/1K1cnQObyp3Ybx4CBeZ0O_PLOJXjsFL2G/view?usp=drive_link",

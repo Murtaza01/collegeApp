@@ -1,11 +1,13 @@
 import { useTranslation } from "react-i18next";
 import { Link, useParams } from "react-router-dom";
-import useLanguage from "../Hooks/useLanguage";
+import useLanguage from "../hooks/useLanguage";
+import BooksHeading from "./BooksHeading";
 export default function ImageSection({ img, paragraph, heading }) {
   const { t } = useTranslation();
-  const { stage } = useParams();
+  // const { stage } = useParams();
   const { paraFont, headFont } = useLanguage();
   let booksHeading;
+
   if (heading === "booksHeading") {
     const { head, quesMark, almost } = t(heading);
     booksHeading = {
@@ -26,23 +28,14 @@ export default function ImageSection({ img, paragraph, heading }) {
       </figure>
       <div className="absolute center3 w-11/12 ">
         <h1
-          className={`text-center text-2xl capitalize text-gray-100 ${headFont} `}
+          className={`text-center text-2xl md:text-3xl lg:text-4xl capitalize text-gray-100 ${headFont} `}
         >
-          {booksHeading ? booksHeading.head : t(heading)}{" "}
-          {booksHeading && (
-            <Link to={""}>
-              {/* `/${stage}/instructions` */}
-              <sup className="lowercase">
-                <span className=" text-gray-300 shadow-inset text-base">
-                  {booksHeading.almost}
-                </span>
-                <span className="text-gray-500">{booksHeading.quesMark}</span>
-              </sup>
-            </Link>
-          )}
+          {booksHeading ? <BooksHeading heading={booksHeading} /> : t(heading)}{" "}
         </h1>
         {paragraph && (
-          <p className={`text-center mt-2 ${paraFont} text-gray-200`}>
+          <p
+            className={`text-center mt-2 lg:mt-5 ${paraFont} text-gray-200 md:text-lg lg:text-xl`}
+          >
             {t(`${paragraph}.des`)}{" "}
             <Link>
               <span className="shadow-inset  text-gray-300">

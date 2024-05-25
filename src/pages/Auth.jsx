@@ -6,7 +6,7 @@ import { checkEmail } from "../util/helpers";
 import { IoIosMail } from "react-icons/io";
 import { IoAlertCircleOutline } from "react-icons/io5";
 import { useTranslation } from "react-i18next";
-import useLanguage from "../Hooks/useLanguage";
+import useLanguage from "../hooks/useLanguage";
 
 let firstRun = true;
 export default function AuthPage() {

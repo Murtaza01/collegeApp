@@ -1,8 +1,9 @@
 export function checkEmail(email) {
-  const input1 =
+  const correctUserInput =
     email.includes("@") && email.includes("edu") && email.includes("iq");
-  const input2 = email.includes("سراب") || email.includes("مرتضى");
-  const validEmail = input1 || input2;
+  const correctAdminInput = email.includes("سراب") || email.includes("مرتضى");
+
+  const validEmail = correctUserInput || correctAdminInput;
 
   return validEmail;
 }

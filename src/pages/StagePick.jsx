@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { authActions } from "../store/auth";
 import stagesData from "../assets/data/stages";
 import { useTranslation } from "react-i18next";
-import useLanguage from "../Hooks/useLanguage";
+import useLanguage from "../hooks/useLanguage";
 
 export default function StagePickPage() {
   const dispatch = useDispatch();
