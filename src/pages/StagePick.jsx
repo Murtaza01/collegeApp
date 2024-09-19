@@ -4,6 +4,8 @@ import { authActions } from "../store/auth";
 import stagesData from "../assets/data/stages";
 import { useTranslation } from "react-i18next";
 import useLanguage from "../hooks/useLanguage";
+import { getAuthStorage } from "../util/helpers";
+import { redirect } from "react-router-dom";
 
 export default function StagePickPage() {
   const dispatch = useDispatch();
@@ -14,7 +16,7 @@ export default function StagePickPage() {
 
   function handleClick(stage) {
     dispatch(authActions.setStage(`/${stage}`));
-    dispatch(authActions.authorizeUser());
+    //dispatch(authActions.authorizeUser());
   }
   return (
     <section dir="ltr" className="h-screen center flex-col gap-10 ">
@@ -24,11 +26,10 @@ export default function StagePickPage() {
           return (
             <li key={stage} className="">
               <Link
-                className={`clickEffect ${
-                  index === 0 ? "bg-accent" : " bg-gray-200"
-                }  text-neutral-900 shadow-md shadow-neutral-400 block w-52 
+                className={`clickEffect ${index === 0 || index === 1 ? "bg-accent" : " bg-gray-200"
+                  }  text-neutral-900 shadow-md shadow-neutral-400 block w-52 
                 capitalize rounded-sm text-center py-3  ${paraFont}`}
-                to={index === 0 ? `/${stage}` : ""}
+                to={index === 0 || index === 1 ? `/${stage}` : ""}
                 onClick={() => handleClick(stage)}
               >
                 {t(`${stage}`)}
@@ -39,4 +40,17 @@ export default function StagePickPage() {
       </ul>
     </section>
   );
+}
+
+export async function loader() {
+  const storageData = await getAuthStorage()
+  if (storageData) {
+    const { user, admin } = storageData
+    if (!user && !admin) {
+      return redirect('/authorize')
+    }
+  } else {
+    return redirect('/authorize')
+  }
+  return null;
 }

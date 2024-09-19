@@ -10,12 +10,14 @@ import useLanguage from "../hooks/useLanguage";
 
 let firstRun = true;
 export default function AuthPage() {
+
   const [validEmail, setValidEmail] = useState(true);
   const email = useRef();
   const dispatch = useDispatch();
   const navigate = useNavigate();
   const { t, i18n } = useTranslation();
   const { headFont } = useLanguage();
+
   useEffect(() => {
     if (firstRun) {
       async function defaultLang() {
@@ -29,10 +31,8 @@ export default function AuthPage() {
 
   function handleFormSubmit(event) {
     event.preventDefault();
-
     const emailValue = email.current.value.toLowerCase();
     const correctEmail = checkEmail(emailValue);
-
     if (emailValue === "admin") {
       dispatch(authActions.authorizeAdmin());
       dispatch(authActions.setStage("/all-stages"));
@@ -43,7 +43,10 @@ export default function AuthPage() {
         setValidEmail(true);
       }, 5000);
     } else {
-      navigate("/stagepick");
+    dispatch(authActions.authorizeUser());
+      setTimeout(()=>{
+     return navigate("/stagepick");
+      },300)
     }
   }
   return (

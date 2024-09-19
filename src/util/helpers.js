@@ -1,3 +1,5 @@
+import storage from "redux-persist/lib/storage";
+
 export function checkEmail(email) {
   const correctUserInput =
     email.includes("@") && email.includes("edu") && email.includes("iq");
@@ -8,5 +10,14 @@ export function checkEmail(email) {
   return validEmail;
 }
 
-const stateStorage = localStorage.getItem("persist:root");
-export const authStorage = JSON.parse(stateStorage);
+
+export async function getAuthStorage() {
+  const presistStorage = await storage.getItem("persist:root")
+  if (presistStorage) {
+    const storageData = JSON.parse(presistStorage)
+    const isAuth = JSON.parse(storageData.isAuth)
+    const stage = JSON.parse(storageData.setStage)
+    return { ...isAuth, stage }
+  }
+  return;
+}

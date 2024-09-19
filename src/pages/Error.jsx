@@ -8,6 +8,7 @@ export default function ErrorPage() {
   const { t } = useTranslation();
   const { paraFont, headFont } = useLanguage();
   const exit = useExit();
+  console.log(error)
   return (
     <div
       className={`flex items-center pt-[25vh]  w-11/12 mx-auto text-center flex-col  min-h-screen text-lg ${paraFont}`}
@@ -15,7 +16,8 @@ export default function ErrorPage() {
       <img src={errorImg} alt="" className="w-56" />
       <h1>{t("error")}</h1>
       <button
-        className={`clickEffect mt-5 text-base rounded-sm capitalize text-neutral-700  bg-accent shadow-neutral-600 px-7 py-2 ${headFont}  shadow-md`}
+        className={`clickEffect mt-5 text-base rounded-sm capitalize text-neutral-700  bg-accent shadow-neutral-600 px-7 py-2
+  ${headFont}  shadow-md`}
         onClick={exit}
       >
         {t("clickHere")}

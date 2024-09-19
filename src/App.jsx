@@ -1,8 +1,8 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import RootPage from "./pages/Root";
-import StagePickPage from "./pages/StagePick";
+import StagePickPage, { loader as routeProtectLoader } from "./pages/StagePick";
 import AuthPage from "./pages/Auth";
-import RedirectPage, { redirectLoader } from "./pages/Redirect";
+import RedirectPage, { loader as redirectLoader } from "./pages/Redirect";
 import NavigationPage from "./pages/Navigation";
 import ErrorPage from "./pages/Error";
 import SubjectsPage from "./pages/Subjects";
@@ -21,10 +21,17 @@ const router = createBrowserRouter([
     path: "/authorize",
     element: <AuthPage />,
   },
-  { path: "/stagepick", element: <StagePickPage /> },
+  {
+    path: "/stagepick",
+    element: <StagePickPage />,
+    loader: routeProtectLoader,
+    errorElement: <ErrorPage />,
+  },
   {
     path: ":stage",
     element: <RootPage />,
+    loader: routeProtectLoader,
+    errorElement: <ErrorPage />,
 
     children: [
       { index: true, element: <NavigationPage /> },

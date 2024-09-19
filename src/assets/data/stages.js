@@ -1,5 +1,5 @@
 import firstStage from "./firstStage";
-// import secondStage from "./secondStage";
+import secondStage from "./secondStage";
 // import thirdStage from "./thirdStage";
 // import fourthStage from "./fourthStage";
 // const book1 = firstStage.books;
@@ -11,7 +11,7 @@ import firstStage from "./firstStage";
 
 const stagesData = {
   ["first-stage"]: firstStage,
-  ["second-stage"]: 2,
+  ["second-stage"]: secondStage,
   ["third-stage"]: 3,
   ["fourth-stage"]: 4,
   ["all-stages"]: {
