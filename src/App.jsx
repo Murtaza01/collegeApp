@@ -8,7 +8,6 @@ import ErrorPage from "./pages/Error";
 import SubjectsPage from "./pages/Subjects";
 import BooksPage from "./pages/Books";
 import useDir from "./hooks/useDir";
-import SubjectPage from "./pages/Subject";
 
 const router = createBrowserRouter([
   {
@@ -39,11 +38,11 @@ const router = createBrowserRouter([
         path: "books",
         element: <BooksPage />,
       },
-      {
+ {
         path: "subjects",
         element: <SubjectsPage />,
       },
-      { path: "subjects/:subject", element: <SubjectPage /> },
+
     ],
   },
 ]);

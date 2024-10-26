@@ -65,10 +65,10 @@ export default function AuthPage() {
               <IoIosMail className="text-xl " />
             </span>
             <input
-              placeholder="Enter your Email"
+              placeholder="Enter Your College Email"
               type="text"
               ref={email}
-              className=" outline-none bg-transparent w-full"
+              className="outline-none bg-transparent w-full"
             />
           </div>
           {!validEmail && (
