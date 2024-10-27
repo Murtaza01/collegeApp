@@ -26,7 +26,7 @@ export const navBarData = [
   },
   {
     id: 3,
-    route: "subjects",
+    route: "resources",
     icon: <GiBookCover />,
   },
 ];

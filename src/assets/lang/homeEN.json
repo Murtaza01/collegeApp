@@ -29,9 +29,9 @@
     "des": "To download a book, simply click the book and pick any email",
     "problem": "are you having a problem?"
   },
-  "subjectsHeading": "stage Subjects",
-  "subjectsDes": {
-    "des": "summaries, exam sheets and notes from former students",
+  "resourcesHeading": "resources",
+  "resourcesDes": {
+    "des": "Here you will find important sites and channels",
     "problem": ""
   }
 }

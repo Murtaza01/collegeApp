@@ -6,6 +6,7 @@ import novel from "../images/books/stage2/joseph_andrews.jpg"
 import communication from "../images/books/stage2/person_to_person.jpg"
 import poetry from "../images/books/stage2/poetry.jpg"
 import totem1 from "../images/books/stage1/totem1.jpg";
+import spanish from "../images/books/stage1/spanish.jpg";
 
 const secondStage = {
   books: [
@@ -48,6 +49,11 @@ const secondStage = {
       title: "Totem 1",
       image: totem1,
       link: "https://drive.google.com/file/d/1w8hTUs3rr_OvopO5Tas94jDa-0BAqRGL/view?usp=drive_link",
+    },
+    {
+      title: "spanish",
+      image: spanish,
+      link: "https://drive.google.com/file/d/10A2GD_5EU-lKsTWm70QlSFs2EKU2oikn/view?usp=drive_link",
     },
 
   ],

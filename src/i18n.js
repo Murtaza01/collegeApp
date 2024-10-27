@@ -4,11 +4,9 @@ import LanguageDetector from "i18next-browser-languagedetector";
 import homeEN from "./assets/lang/homeEN.json";
 import homeAR from "./assets/lang/homeAR.json";
 // home = auth + root
-import subjectsAR from "./assets/lang/subjectsAR.json";
-import subjectsEN from "./assets/lang/subjectsEN.json";
 
-const arabicTrans = { ...homeAR, ...subjectsAR };
-const englishTrans = { ...homeEN, ...subjectsEN };
+const arabicTrans = { ...homeAR, };
+const englishTrans = { ...homeEN, };
 
 export default i18n
   .use(LanguageDetector)

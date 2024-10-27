@@ -5,9 +5,9 @@ import AuthPage from "./pages/Auth";
 import RedirectPage, { loader as redirectLoader } from "./pages/Redirect";
 import NavigationPage from "./pages/Navigation";
 import ErrorPage from "./pages/Error";
-import SubjectsPage from "./pages/Subjects";
 import BooksPage from "./pages/Books";
 import useDir from "./hooks/useDir";
+import ResourcesPage from "./pages/Resources";
 
 const router = createBrowserRouter([
   {
@@ -39,8 +39,8 @@ const router = createBrowserRouter([
         element: <BooksPage />,
       },
  {
-        path: "subjects",
-        element: <SubjectsPage />,
+        path: "resources",
+        element: <ResourcesPage />, 
       },
 
     ],
