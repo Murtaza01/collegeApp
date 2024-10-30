@@ -7,7 +7,6 @@ import computer_2 from "../images/books/stage1/computer_2.jpg";
 import totem1 from "../images/books/stage1/totem1.jpg";
 import spanish from "../images/books/stage1/spanish.jpg";
 import writing from "../images/books/stage1/writing_in_paragraphs.jpg";
-
 const firstStage = {
   books: [
     {
@@ -58,6 +57,10 @@ const firstStage = {
       link: "https://drive.google.com/file/d/1K1cnQObyp3Ybx4CBeZ0O_PLOJXjsFL2G/view?usp=drive_link",
     },
   ],
-};
+  resources: {
+    channels: [
+    ],
+  }
+ };
 
 export default firstStage;

@@ -7,6 +7,8 @@ import communication from "../images/books/stage2/person_to_person.jpg"
 import poetry from "../images/books/stage2/poetry.jpg"
 import totem1 from "../images/books/stage1/totem1.jpg";
 import spanish from "../images/books/stage1/spanish.jpg";
+import channel_1 from "../images/channel_1.jpg"
+import channel_2 from "../images/channel_2.jpg"
 
 const secondStage = {
   books: [
@@ -57,6 +59,19 @@ const secondStage = {
     },
 
   ],
+   resources: {
+    channels: [
+      {
+      title:"English Second Stage",
+      img:channel_1,
+      },
+      {
+  title:"2nd stage students",
+        img:channel_2,
+        link:"https://t.me/ka20wther",
+      }
+    ],
+  }
 };
 
 export default secondStage;

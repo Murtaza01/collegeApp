@@ -1,15 +1,13 @@
-//import { useOutletContext } from "react-router-dom";
-//import useLanguage from "../hooks/useLanguage";
 import ImageSection from "../components/ImageSection";
 import image from "../assets/images/college.jpg";
-import resourcesData from "../assets/data/resources";
 import Heading from "../components/Heading";
+import { useOutletContext } from "react-router-dom";
+import useLanguage from "../hooks/useLanguage";
 
 export default function ResourcesPage() {
-  //const { books } = useOutletContext();
-  //const { isArabic } = useLanguage();
-  //const isEven = books.length % 2 !== 0;
-   const {channels} = resourcesData 
+  const { resources } = useOutletContext();
+  const { channels } = resources
+  const { paraFont } = useLanguage();
   return (
     <main className="bg-white min-h-screen  bg-cubePattern">
       <ImageSection
@@ -17,15 +15,22 @@ export default function ResourcesPage() {
         heading="resourcesHeading"
         paragraph="resourcesDes"
       />
-     <section className="flex flex-col gap-5 justify-center items-center pb-5">
-        <Heading title="Channels"/>
-         {channels.map(({img,title})=>{
-return   <div className="w-80 h-16 boxShadow bg-gray-100 rounded-md px-2 flex gap-10 items-center">
-            <img src={img} className="size-14 rounded-md" />
-         <p>{title}</p> 
-       </div>
+      {channels.length === 0 ? <span className="py-20 center2">Nothing Here</span>
+        :
+        <section className="flex flex-col gap-5 justify-center items-center pb-5">
+          <Heading title="Channels" />
+          {channels.map(({ img, title, link }) => {
+            return <a href={link ?? ""} target="_blank" className="clickEffect">
+              <div className="w-80 h-16 px-1 boxShadow bg-gray-50 rounded-md  flex gap-8 items-center">
+                <span className="rounded-full  border-[3px] border-accent ">
+                  <img src={img} className="rounded-full object-cover size-14" />
+                </span>
+                <p className={`capitalize ${paraFont}`}>{title}</p>
+              </div>
+            </a>
           })}
-      </section> 
+        </section>
+      }
     </main>
   );
 }
