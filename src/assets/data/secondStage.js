@@ -48,27 +48,27 @@ const secondStage = {
       link: "https://drive.google.com/file/d/1QI9eiEROjFDZuPqOL8wJhZWU7vkyu4kM/view?usp=drive_link",
     },
     {
-      title: "Totem 1",
+      title: "Totem1_2nd",
       image: totem1,
       link: "https://drive.google.com/file/d/1w8hTUs3rr_OvopO5Tas94jDa-0BAqRGL/view?usp=drive_link",
     },
     {
-      title: "spanish",
+      title: "spanish_2nd",
       image: spanish,
       link: "https://drive.google.com/file/d/10A2GD_5EU-lKsTWm70QlSFs2EKU2oikn/view?usp=drive_link",
     },
 
   ],
-   resources: {
+  resources: {
     channels: [
       {
-      title:"English Second Stage",
-      img:channel_1,
+        title: "English Second Stage",
+        img: channel_1,
       },
       {
-  title:"2nd stage students",
-        img:channel_2,
-        link:"https://t.me/ka20wther",
+        title: "2nd stage students",
+        img: channel_2,
+        link: "https://t.me/ka20wther",
       }
     ],
   }

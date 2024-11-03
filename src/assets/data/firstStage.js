@@ -61,6 +61,6 @@ const firstStage = {
     channels: [
     ],
   }
- };
+};
 
 export default firstStage;
