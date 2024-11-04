@@ -2,6 +2,7 @@ import firstStage from "./firstStage";
 import secondStage from "./secondStage";
 // import thirdStage from "./thirdStage";
 // import fourthStage from "./fourthStage";
+
 const book1 = firstStage.books;
 const ch1 = firstStage.resources.channels
 
@@ -27,3 +28,5 @@ const stagesData = {
 };
 
 export default stagesData;
+
+

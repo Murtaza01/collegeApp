@@ -12,7 +12,7 @@
   "language": "change language",
   "about us": "about us",
   "books": "books",
-  "subjectsGuide": "subjects guide",
+  "resources": "resources",
   "info": "instructions",
   "navHeading": "welcome",
   "navDes": {
@@ -33,5 +33,7 @@
   "resourcesDes": {
     "des": "Here you will find important sites and channels",
     "problem": ""
-  }
+  },
+  "channels":"channels",
+  "sites":"sites"
 }

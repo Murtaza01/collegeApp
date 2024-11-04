@@ -38,9 +38,9 @@ export const navCardData = [
     route: "books",
   },
   {
-    title: "subjectsGuide",
+    title: "resources",
     icon: <GiBookCover className="text-orange-500" />,
-    route: "subjects",
+    route: "resources",
   },
 
   {

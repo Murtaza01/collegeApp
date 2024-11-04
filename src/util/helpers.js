@@ -1,4 +1,5 @@
 import storage from "redux-persist/lib/storage";
+import libgenSvg from "../assets/images/libgen.svg"
 
 export function checkEmail(email) {
   const correctUserInput =
@@ -21,3 +22,12 @@ export async function getAuthStorage() {
   }
   return;
 }
+
+export const libgen = {
+  title: "library genesis",
+  img: libgenSvg,
+  link: "https://libgen.is/",
+  helpLink: "https://youtu.be/OHFiPl_7t70?si=i21bC7ZpOpaUsYRi"
+}
+
+
