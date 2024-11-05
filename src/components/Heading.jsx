@@ -1,13 +1,15 @@
 import useLanguage from "../hooks/useLanguage";
 import { useTranslation } from "react-i18next";
-
+import { FaTelegram } from "react-icons/fa";
 export default function Heading({ title }) {
 
   const { headFont } = useLanguage();
   const { t } = useTranslation();
 
-  return <h2 className={` ${headFont} text-center mt-10 text-2xl text-neutral-800 capitalize`}
+  return <><h2 className={` ${headFont} flex justify-center items-center gap-2 text-center mt-10 text-2xl text-neutral-800 capitalize`}
   >
     {t(title)}
+    {title === "channels" ? <FaTelegram className="text-sky-400" /> : ""}
   </h2>
+  </>
 }
