@@ -1,49 +1,41 @@
 import ImageSection from "../components/ImageSection";
-import image from "../assets/images/college.jpg";
+import collegeImage from "../assets/images/college.jpg";
 import Heading from "../components/Heading";
 import { useOutletContext } from "react-router-dom";
-import useLanguage from "../hooks/useLanguage";
+import SitesCard from "../components/SitesCard";
+import ChannelsCard from "../components/ChannelsCard";
+import { FaTelegram } from "react-icons/fa";
+import { AiOutlineGlobal } from "react-icons/ai";
 
 export default function ResourcesPage() {
   const { resources } = useOutletContext();
   const { channels, sites } = resources
-  const { paraFont } = useLanguage();
 
   return (
-    <main className="bg-white min-h-screen pb-10  bg-cubePattern">
+    <main className="bg-gray-100 min-h-screen pb-10 ">
       <ImageSection
-        img={image}
+        img={collegeImage}
         heading="resourcesHeading"
         paragraph="resourcesDes"
       />
-      <Heading title="channels" />
+      <Heading title="channels" icon={<FaTelegram className="text-sky-600" />} />
       {channels.length === 0 ? <span className="py-20 center2 text-lg font-bold text-red-600">Nothing Here</span>
         :
         <section className="flex flex-col gap-5 justify-center items-center mt-10">
           {channels.map(({ img, title, link }) => {
-            return <a href={link} key={title} target="_blank" className="clickEffect">
-              <div className="w-80 h-16 px-1 boxShadow bg-gray-50 rounded-md  flex gap-8 items-center">
-                <span className="rounded-full  border-[3px] border-accent ">
-                  <img src={img} className="rounded-full object-cover size-14" />
-                </span>
-                <p className={`capitalize ${paraFont}`}>{title}</p>
-              </div>
-            </a>
+            return <ChannelsCard key={title} title={title} img={img} link={link} />
           })}
         </section>
       }
-      <Heading title="sites" />
+      <Heading title="sites" icon={<AiOutlineGlobal  />} />
       <section className="flex mt-10 justify-center items-center gap-7">
         {sites.map(({ title, img, link, helpLink }) => {
-          return <div key={title} className="relative">
-            <a href={link} key={title} target="_blank" >
-              <div className="rounded-md boxShadow flex flex-col gap-1 items-center bg-gray-50 px-3 py-3">
-                <img src={img} className="size-20" />
-                <h3 className="capitalize">{title}</h3>
-              </div>
-            </a>
-            <a href={helpLink} target="_blank" className="absolute  bg-gray-300 -mt-4 rounded-full w-6 text-center text-lg right-0 top-0">?</a>
-          </div>
+          return <SitesCard
+            key={title}
+            title={title}
+            img={img}
+            link={link}
+            helpLink={helpLink} />
         })}
       </section>
     </main>

@@ -1,8 +1,8 @@
-import { libgen } from "../../util/helpers";
 import firstStage from "./firstStage";
 import secondStage from "./secondStage";
 // import thirdStage from "./thirdStage";
 // import fourthStage from "./fourthStage";
+import sites from "./sites";
 
 const book1 = firstStage.books;
 const ch1 = firstStage.resources.channels
@@ -24,10 +24,9 @@ const stagesData = {
     books,
     resources: {
       channels,
-      sites:[
-        libgen
-      ]
-    }
+      sites
+    },
+    
   },
 };
 

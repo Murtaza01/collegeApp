@@ -8,8 +8,7 @@ import poetry from "../images/books/stage2/poetry.jpg"
 import totem1 from "../images/books/stage1/totem1.jpg";
 import spanish from "../images/books/stage1/spanish.jpg";
 import channel_1 from "../images/channel_2.jpg"
-import { libgen } from "../../util/helpers"
-
+import sites from "./sites"
 const secondStage = {
   books: [
     {
@@ -67,9 +66,7 @@ const secondStage = {
         link: "https://t.me/ka20wther",
       }
     ],
-    sites: [
-      libgen
-    ]
+   sites 
   }
 };
 
